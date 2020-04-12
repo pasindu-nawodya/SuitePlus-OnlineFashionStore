@@ -1,10 +1,12 @@
 import React from 'react';
-import LoginStockMan from './component/users/StockManager/LoginStockMan';
+import Dashboard from './component/users/StockManager/Dashboard';
 
 function App() {
   return (
-    <div>      
-      <LoginStockMan />
+    <div> 
+    
+      <Dashboard />
+
     </div>
   );
 }
