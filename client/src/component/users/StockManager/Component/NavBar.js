@@ -6,9 +6,9 @@ export default class NavBar extends Component {
     render() {
         return (
 
-            <nav class="navbar navbar-expand-lg navbar-light " style={{backgroundColor: "#36cc54",color:"white"}}>
+            <nav class="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#008272"}}>
             
-                <a class="navbar-brand" href="#"><b>SuitePlus</b></a>
+                <a class="navbar-brand text-white" href="#"><b>SuitePlus</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,24 +24,22 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="#"><b>Dashboard </b><span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-white" href="#"><b>Dashboard </b><span class="sr-only">(current)</span></a>
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="#"><b>Production List</b><span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-white" href="#"><b>Production List</b><span class="sr-only">(current)</span></a>
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
    
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown active" >
-                                
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <li class="nav-item dropdown active" >                                
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <b>Item Operation</b>
                                 </a>
-
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Add Product</a>
                                     <a class="dropdown-item" href="#">Product List</a>
@@ -55,9 +53,8 @@ export default class NavBar extends Component {
 
                     <form class="form-inline my-2 my-lg-0">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown active" >
-                                
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <li class="nav-item dropdown active" >                                
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <FontAwesomeIcon className="faicons" icon={faUser} /><span>&nbsp;&nbsp;</span>
                                     <b>Pasindu Nawodya</b>
                                 </a>

@@ -19,7 +19,7 @@ body{
 .bgGreen{
     width:100%;
     height: 100%;
-    background-color: rgb(19, 170, 82);
+    background-color:#008272;
     border-top-left-radius: 90px;
 }
 
@@ -118,7 +118,7 @@ body{
     align-items: center;
     width: 200px;
     height: 47px;
-    background-color: rgb(18, 161, 78);
+    background-color: #116149;
     text-align: center;
     line-height: 47px;
     border-radius: 4px;
@@ -127,7 +127,7 @@ body{
 }
 
 .btnAuth:hover{
-    background-color: darkgreen;
+    background-color: rgb(24, 82, 24);
 }
 
 @media screen and (max-width: 760px){
