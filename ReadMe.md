@@ -1,4 +1,4 @@
 
-# SuitePlus : Online Fashion 
+# SuitePlus
 
 Group Work 
