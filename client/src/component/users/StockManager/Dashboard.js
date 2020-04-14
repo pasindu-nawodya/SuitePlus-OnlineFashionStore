@@ -9,7 +9,7 @@ export default class Dashboard extends Component {
 
         const value=[{headers :"Available Stock",values : "200"},
                      {headers :"Total Stock Value",values : "200"},
-                     {headers :"Catogary Count",values : "200"}];
+                     {headers :"Category Count",values : "200"}];
 
         return (            
         
