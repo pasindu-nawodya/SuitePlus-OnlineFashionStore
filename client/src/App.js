@@ -1,12 +1,13 @@
 import React from 'react';
-import AddItem from './component/users/StockManager/AddItem'
+import ProductListTable from './component/users/StockManager/ProductListTable'
+//import AddItem from './component/users/StockManager/AddItem'
 //import Dashboard from './component/users/StockManager/Dashboard';
 //import LoginStockMan from './component/users/StockManager/LoginStockMan';
 
 function App() {
   return (
     <div>     
-      <AddItem />
+      <ProductListTable />
     </div>
   );
 }

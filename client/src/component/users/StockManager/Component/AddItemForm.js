@@ -74,7 +74,7 @@ export default class AddItemForm extends Component {
                                     </div>
                                     <select class="custom-select" id="inputGroupSelect01">
                                         <option selected>Choose Range</option>
-                                        <option value="C">child</option>
+                                        <option value="C">Child</option>
                                         <option value="T">Teen</option>
                                         <option value="Y">Young</option>
                                         <option value="A">Adult</option>
@@ -87,12 +87,17 @@ export default class AddItemForm extends Component {
                                     </div>
                                     <select class="custom-select" id="inputGroupSelect01">
                                         <option selected>Choose Gender</option>
-                                        <option value="M">Male</option>
-                                        <option value="F">Female</option>
+                                        <option value="M">Men</option>
+                                        <option value="F">Women</option>
                                     </select>
                                 </div>
 
-                                
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+                                    </div>
+                                    <input type="textarea" class="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required/>                                 
+                                </div>                                
 
                                 <hr class="mb-4" />
 
