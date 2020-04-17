@@ -8,7 +8,7 @@ export default class Footer extends Component {
 
         return (   
                 
-            <div class="footer-copyright bg-dark text-center py-3  text-light">© {n} Copyright:
+            <div className="footer-copyright bg-dark text-center py-3  text-light">© {n} Copyright:
                 <a href="#"> SuitePlus - Signature of Trend</a>
             </div>
             

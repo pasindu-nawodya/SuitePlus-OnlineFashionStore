@@ -16,7 +16,7 @@ export default class Dashboard extends Component {
             <div>    
                 <NavBar />                   
                 <Slider />
-                <div class="container">
+                <div className="container">
                     <Cards body={value} />
                 </div>
                 <Footer />

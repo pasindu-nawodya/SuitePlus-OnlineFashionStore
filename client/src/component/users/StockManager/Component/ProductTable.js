@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 export default class ProductTable extends Component {
     render() {
         return (
-            <div class="container">
+            <div className="container">
 
-                <table class="table" style={{width:"100%"}}>
+                <table className="table" style={{width:"100%"}}>
                     <thead>
-                        <tr class="table-active">
+                        <tr className="table-active">
                             <th scope="col">Code</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Quantity</th>
@@ -21,9 +21,9 @@ export default class ProductTable extends Component {
                             <th scope="row">1</th>
                             <td>Otto</td>
                             <td>@mdo</td>
-                            <td><a href="#"><button class="btn btn-outline-primary btn-sm">Details</button></a></td>
-                            <td><a href="#"><button class="btn btn-outline-secondary btn-sm">Update</button></a></td>
-                            <td><a href="#"><button class="btn btn-outline-danger btn-sm">Delete</button></a></td>
+                            <td><a href="#"><button className="btn btn-outline-primary btn-sm">Details</button></a></td>
+                            <td><a href="#"><button className="btn btn-outline-secondary btn-sm">Update</button></a></td>
+                            <td><a href="#"><button className="btn btn-outline-danger btn-sm">Delete</button></a></td>
                         </tr>
                     </tbody>
                 </table>

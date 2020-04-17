@@ -5,8 +5,8 @@ export default class TitleBanner extends Component {
         return (
             <div>
             <main role="main">
-                <section class="jumbotron text-center">
-                    <div class="container">
+                <section className="jumbotron text-center">
+                    <div className="container">
                         <h1 style={{fontSize:"30px"}}><b>{this.props.TitleName}</b></h1>                        
                     </div>            
                 </section>
