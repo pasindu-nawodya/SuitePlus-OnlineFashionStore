@@ -1,0 +1,23 @@
+{
+  "name": "suiteplus",
+  "version": "1.0.0",
+  "description": "Group Work ..!",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pasindu-nawodya/SuitePlus-OnlineFashionStore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pasindu-nawodya/SuitePlus-OnlineFashionStore/issues"
+  },
+  "homepage": "https://github.com/pasindu-nawodya/SuitePlus-OnlineFashionStore#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
