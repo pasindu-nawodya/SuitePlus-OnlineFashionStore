@@ -8,7 +8,6 @@ export default class ProductListTable extends Component {
     render() {
         return (
             <div>
-                <NavBar />
                 <TitleBanner TitleName={"Product List"} />
                 <ProductTable />
                 <Footer />

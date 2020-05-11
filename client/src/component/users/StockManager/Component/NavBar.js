@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt,faUser } from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 
 export default class NavBar extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class NavBar extends Component {
 
             <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#008272"}}>
             
-                <a className="navbar-brand text-white" href="#"><b>SuitePlus</b></a>
+                <Link to="/"><div className="navbar-brand text-white"><b>SuitePlus</b></div></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -24,13 +25,13 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li className="nav-item active">
-                            <a className="nav-link text-white" href="#"><b>Dashboard </b><span className="sr-only">(current)</span></a>
+                        <Link to="/"><div className="nav-link text-white"><b>Dashboard </b><span className="sr-only">(current)</span></div></Link>
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li className="nav-item active">
-                            <a className="nav-link text-white" href="#"><b>Production List</b><span className="sr-only">(current)</span></a>
+                        <Link to="/productList"><div className="nav-link text-white"><b>Production List</b><span className="sr-only">(current)</span></div></Link>
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -41,10 +42,10 @@ export default class NavBar extends Component {
                                     <b>Item Operation</b>
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">Add Product</a>
-                                    <a className="dropdown-item" href="#">Product List</a>
+                                    <Link to="/additem" ><div className="dropdown-item">Add Product</div></Link>
+                                    <Link to="/productList"><div className="dropdown-item" >Product List</div></Link>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Remove Item</a>                                    
+                                    <Link to="productList"><div className="dropdown-item">Remove Item</div></Link>                         
                                 </div>
                             </li>
                         </ul>
@@ -60,7 +61,7 @@ export default class NavBar extends Component {
                                 </a>
 
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">Stock Manager</a>
+                                    <div className="dropdown-item">Stock Manager</div>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#">Profile</a>
                                     <a className="dropdown-item" href="#">Account Setting</a>
