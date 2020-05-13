@@ -4,7 +4,8 @@ import React from 'react';
 function App() {
   return (
     <div>     
-      
+      <h1>Methanta Oyage component eka daala oyage part eka test karanna</h1>
+      <h2 style={{color:"red"}}>Import Karapuwa delete karanna epa</h2>
     </div>
   );
 }
