@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from './Component/NavBar';
 import Slider from './Component/Slider';
 import Cards from './Component/Cards';
 import Footer from './Component/Footer';
@@ -13,10 +12,9 @@ export default class Dashboard extends Component {
 
         return (            
         
-            <div>    
-                <NavBar />                   
+            <div>                     
                 <Slider />
-                <div class="container">
+                <div className="container">
                     <Cards body={value} />
                 </div>
                 <Footer />

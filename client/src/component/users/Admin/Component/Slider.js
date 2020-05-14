@@ -10,15 +10,15 @@ export default class Slider extends Component {
         return (
             <div>
               <main role="main">
-                <section className="jumbotron text-center">
-                  <div className="container">
-                    <h1 style={{fontSize:"60px"}}><b>Stock Manager Dashboard</b></h1>
+                <section class="jumbotron text-center">
+                  <div class="container">
+                    <h1 style={{fontSize:"60px"}}><b>Admin Dashboard</b></h1>
                     <h4>Welcome Pasindu </h4><br />              
-                    <p className="lead text-muted"><b>Current Date: {date} </b></p>                
+                    <p class="lead text-muted"><b>Current Date: {date} </b></p>                
                     <p>
-                      <a href="#" className="btn btn-primary my-2">Production List</a>
+                      <a href="#" class="btn btn-primary my-2">Add Category</a>
                       <span>&nbsp;&nbsp;</span>
-                      <a href="#" className="btn btn-secondary my-2">Item Operation</a>
+                      <a href="#" class="btn btn-secondary my-2">Add StockManager</a>
                     </p>
                   </div>            
                 </section>

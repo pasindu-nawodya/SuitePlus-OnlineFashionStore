@@ -1,0 +1,160 @@
+body{
+    background-color: rgb(232, 243, 231);
+}
+
+.authBox{
+    width: 700px;
+    overflow: hidden;
+    margin: 80px auto 30px;
+}
+
+.leftBox{
+    width:300px;
+    height: 480px;
+    float: left;
+    position: relative;
+    display: block;
+}
+
+.bgGreen{
+    width:100%;
+    height: 100%;
+    background-color:#008272;
+    border-top-left-radius: 90px;
+}
+
+.imageAuth{
+    background-image: url("../img/bgimg.jpg");
+    width: 100%;
+    height: 100%;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 90px;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+}
+
+.imageText{
+    font-size: 28px;
+    position: absolute;
+    left: 500px;
+    color: #ffffff;
+}
+
+.imageText.bold{
+    font-weight: bold;
+}
+
+.imageText.style1{
+    top: 200px;
+    left: 20px;
+}
+
+.imageText.style2{
+    top: 250px;
+    left: 20px;
+}
+
+.rightBox{
+    background: #ffffff;
+    width:398px;
+    height: 478px;
+    float: right;
+    border: 1px solid #59c385;
+    border-bottom-right-radius: 90px;
+}
+
+.box{
+    width: 310px;
+    height: 415px;
+    margin-left: 32px ;
+    margin-right: 32px ;
+    margin-top: 100px;
+
+}
+
+.titleAuth{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #116149;
+}
+
+.inputSBox{
+    width: 90%;
+    height: 42px;
+    border-bottom: 2px solid #d8d8d8;
+    margin-bottom: 10px;
+}
+
+.inputS{
+    width: 100%;
+    height: 98%;
+    font-size: 16px;
+    color: #37353f;
+    text-indent: 10px;
+    border: 0;
+    outline: none;
+}
+
+.contentBox{
+    overflow: hidden;
+    height: 42px;
+    margin-bottom: 30px;
+}
+
+.text1{
+    float: left;
+    color: #183a21;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10%;
+}
+
+.btnAuth{
+    align-items: center;
+    width: 200px;
+    height: 47px;
+    background-color: #116149;
+    text-align: center;
+    line-height: 47px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.btnAuth:hover{
+    background-color: rgb(24, 82, 24);
+}
+
+@media screen and (max-width: 760px){
+    .authBox{
+        width: 75%;
+    }
+
+    .box{
+        margin-top: 100px;
+    }
+
+    .titleAuth{
+        margin-top: 10px;
+    }
+
+    .leftBox{
+        display: none;
+    }
+
+    .inputSBox{
+        margin: 10px;
+    }
+
+    .rightBox{
+        width:100%;
+        float:initial;
+        border: 1;
+        border-bottom-right-radius: 0;
+    }
+}

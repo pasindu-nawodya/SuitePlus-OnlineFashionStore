@@ -1,12 +1,12 @@
 import React from 'react';
-import AddItem from './component/users/StockManager/AddItem'
-//import Dashboard from './component/users/StockManager/Dashboard';
-//import LoginStockMan from './component/users/StockManager/LoginStockMan';
+//import AddItem from './component/users/StockManager/AddItem'
+//import Dashboard from './component/users/Admin/Dashboard';
+import LoginAdmin from './component/users/Admin/LoginAdmin';
 
 function App() {
   return (
     <div>     
-      <AddItem />
+      <LoginAdmin />
     </div>
   );
 }
