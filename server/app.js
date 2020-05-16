@@ -8,11 +8,15 @@ require('dotenv/config');
 
 //import routes
 const productRoute = require('./Routes/product');
+const CartRoute = require('./routes/shoppingCart');
+const wishListRouter = require('./routes/wishList');
 
 //middleware
 app.use(bodyparser.json());
 app.use(cors());
 app.use('/product',productRoute);
+app.use('/cart',CartRoute);
+app.use('/wishlist',wishListRouter);
 
 //get
 app.get('/',(req,res)=>{
