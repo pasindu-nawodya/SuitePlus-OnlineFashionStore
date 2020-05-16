@@ -237,7 +237,7 @@ class CartItems extends React.Component{
 
                         <div className="card">
                             <br/>
-                            <span> <img src={require('./images/empty.png')} className="sadimage"/>
+                            <span> <img src={require('../images/empty.png')} className="sadimage"/>
                   <p className="empty">You don't have any items in your cart. Let's get shopping!</p></span>
                             <MDBBtn color="cyan" style={{color: "white"}}>Start Shopping</MDBBtn>
 
