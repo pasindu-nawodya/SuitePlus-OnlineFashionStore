@@ -1,7 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
-import '../CSS/WishListMain.css';
-import WishList from "../Component/wishlist";
+import './CSS/WishListMain.css';
+
+import WishList from "./Component/wishlist";
 
 
 

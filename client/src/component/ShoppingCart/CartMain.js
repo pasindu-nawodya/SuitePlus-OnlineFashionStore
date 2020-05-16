@@ -68,7 +68,7 @@ class MainComponent extends React.Component{
                             <h1>
 
 
-                                <span>&nbsp;&nbsp;&nbsp;<img src={require('../images/favouritecart.png')}/></span>
+                                <span>&nbsp;&nbsp;&nbsp;<img src={require('./images/favouritecart.png')}/></span>
                                 My Shopping Cart</h1>
 
                         </center>
