@@ -1,9 +1,7 @@
 import React from 'react';
 
-//import AddItem from './component/users/StockManager/AddItem'
-//import Dashboard from './component/users/Admin/Dashboard';
-import LoginAdmin from './component/users/Admin/LoginAdmin';
-//import StockApp from './component/users/StockManager/StockApp';
+import LoginAdmin from './component/Admin/LoginAdmin';
+//import StockApp from './component/StockManager/StockApp';
 
 
 function App() {
