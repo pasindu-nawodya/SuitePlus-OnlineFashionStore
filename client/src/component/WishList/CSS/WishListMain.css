@@ -1,0 +1,16 @@
+body{
+    background-color: red;
+}
+.title{
+    font-family: 'Cherry Cream Soda';
+    background-color: white;
+    padding-right: 100px;
+}
+h1{
+    color:#DC143C	;
+
+}
+.heartimg{
+
+    height:60px;
+}

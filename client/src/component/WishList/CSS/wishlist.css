@@ -1,0 +1,226 @@
+.col-md-4 {
+    padding: 1rem;
+    background-color: #e6f2f0;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    height: 150px;
+}
+
+.col-md-3 {
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 1px solid white;
+    height:auto;
+}
+
+.list{
+    background-color: #B0C4DE;
+    width:auto;
+    height: auto;
+
+
+
+
+}
+.productName{
+
+    font-family: Alike;
+    font-size: 13px;
+    font-weight: bold;
+
+
+}
+.productName:hover{
+    color: orange;
+    cursor: pointer;
+    text-decoration-line: underline;
+
+}
+
+.product{
+    text-align: center;
+    float: right;
+    line-height: 15px;
+
+}
+.productColour{
+    font-family: Asul;
+    color: #b3b5b5;
+    font-size: 15px;
+
+}
+.productSize{
+    font-family: Asul;
+    color: #b3b5b5;
+    font-size: 15px;
+}
+.productimage{
+    height: auto;
+    width:140px;
+
+    padding-bottom: 15px;
+
+}
+
+.quantityString{
+
+    font-family: "Corben";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.productPrice{
+
+    font-family: "Farro";
+    font-size: 23px;
+}
+
+.productQty{
+
+    font-family: "Farro";
+    font-size: 23px;
+}
+.remove{
+
+    text-align: right;
+
+}
+.trashIcon{
+
+    height: 33px;
+
+
+}
+.trashBtn{
+    background-color: white;
+    border: 0px;
+    outline: none;
+
+}
+
+.trashBtn:active {
+    background-color: white;
+    box-shadow: 0 2px whitesmoke;
+    transform: translateY(4px);
+    outline: none;
+}
+
+.trashBtn:focus {
+
+    outline:0;
+}
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+
+
+
+.qty {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+.increseDecreseBtn{
+
+
+    border-radius: 4px;
+    margin: 0px;
+    width: 30px;
+    height: 25px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 0px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.increseDecreseBtn:hover{
+
+    cursor: pointer;
+}
+.emptyList{
+
+
+    border: 1px rebeccapurple;
+    text-align: right;
+
+}
+.card{
+    background-color: black;
+    width: 480px;
+    height: auto;
+    border-color: coral;
+
+}
+.sadimage{
+
+    height: auto;
+    width:100px;
+
+    padding-bottom: 15px;
+}
+.empty{
+
+    font-family: 'Actor';
+    font-size: 22px;
+    font-weight: bold;
+}
