@@ -148,7 +148,7 @@ export default class AddItemForm extends Component {
                                         <button type="submit"  className="btn btn-primary btn-lg btn-block">Add Product</button>
                                     </div>
                                     <div className="col-md-6 mb-3">
-                                        <button type="button" className="btn btn-danger btn-lg btn-block">Cancel</button>
+                                        <a href="http://localhost:3000/"><button type="button" className="btn btn-danger btn-lg btn-block">Cancel</button></a>
                                     </div>
                                 </div>
 
