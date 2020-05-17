@@ -237,7 +237,7 @@ class CartItems extends React.Component{
 
                         <div className="card">
                             <br/>
-                            <span> <img src={require('./images/empty.png')} className="sadimage"/>
+                            <span> <img src={require('../images/empty.png')} className="sadimage"/>
                   <p className="empty">You don't have any items in your cart. Let's get shopping!</p></span>
                             <MDBBtn color="cyan" style={{color: "white"}}>Start Shopping</MDBBtn>
 
@@ -261,7 +261,7 @@ class CartItems extends React.Component{
                         <MDBContainer key={item.key}>
                             <MDBRow key={item.key}>
 
-                                <MDBCol md="3" key={item.key}><img src={require('./images/whiteFrock.jpg')}
+                                <MDBCol md="3" key={item.key}><img src={require('../images/whiteFrock.jpg')}
                                                                    className="productimage"/> </MDBCol>
                                 <MDBCol md="3" className="product" key={item.key}>
                                     <span><p className="productName" key={item.key}>{item.productName}</p></span>
@@ -281,7 +281,7 @@ class CartItems extends React.Component{
                                     className="productPrice">Rs {item.price}/=</p></span><br/><br/><br/><br/><br/>
                                     <div className="remove">
                                         <button className="trashBtn" onClick={() => this.deleteProduct(item._id)}><img
-                                            src={require('./images/trash.png')} className="trashIcon"/></button>
+                                            src={require('../images/trash.png')} className="trashIcon"/></button>
                                     </div>
 
 
