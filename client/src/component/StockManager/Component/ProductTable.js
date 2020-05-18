@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import UpdateItem from '../UpdateItem';
+import {BrowserRouter as Router , Switch , Route } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default class ProductTable extends Component {
 
@@ -57,9 +60,14 @@ export default class ProductTable extends Component {
                             <th scope="row">{++count}</th>
                             <td>{item.pname}</td>
                             <td>{item.pqty}</td>
-                            <td><a href="#"><button className="btn btn-outline-primary btn-sm">Details</button></a></td>
-                            <td><a href="#"><button className="btn btn-outline-secondary btn-sm">Update</button></a></td>
-                            <td><a href="#"><button className="btn btn-outline-danger btn-sm">Delete</button></a></td>
+                            <Router>                                
+                                <td><a href="#"><button className="btn btn-outline-primary btn-sm">Details</button></a></td>
+                                <td><Link to="/update"><button className="btn btn-outline-secondary btn-sm">Update</button></Link></td>
+                                <td><a href="#"><button className="btn btn-outline-danger btn-sm">Delete</button></a></td>                            
+                                <Switch>                                    
+                                    <Route path="/update" component={UpdateItem}/>
+                                </Switch>
+                            </Router>
                         </tr>
                     ))}                        
                     </tbody>

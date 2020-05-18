@@ -11,13 +11,13 @@ export default class Appfunction extends Component {
         return (
             <div>  
                 <Router>                       
-                    <NavBar />
-                    <Switch>
-                        <Route path="/" exact component={Dashboard}/>
-                        <Route path="/additem" component={AddItem}/>
-                        <Route path="/productList" component={ProductListTable}/>
-                    </Switch>
-                </Router>            
+                 <NavBar />
+                 <Switch>
+                      <Route path="/" exact component={Dashboard}/>
+                      <Route path="/additem" component={AddItem}/>
+                      <Route path="/productList" component={ProductListTable}/>
+                 </Switch>
+                 </Router>  
             </div>
         );
     }
