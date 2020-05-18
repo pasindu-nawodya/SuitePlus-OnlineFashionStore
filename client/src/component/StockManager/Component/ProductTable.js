@@ -59,15 +59,10 @@ export default class ProductTable extends Component {
                         <tr key={item._id}>
                             <th scope="row">{++count}</th>
                             <td>{item.pname}</td>
-                            <td>{item.pqty}</td>
-                            <Router>                                
-                                <td><a href="#"><button className="btn btn-outline-primary btn-sm">Details</button></a></td>
-                                <td><Link to="/update"><button className="btn btn-outline-secondary btn-sm">Update</button></Link></td>
-                                <td><a href="#"><button className="btn btn-outline-danger btn-sm">Delete</button></a></td>                            
-                                <Switch>                                    
-                                    <Route path="/update" component={UpdateItem}/>
-                                </Switch>
-                            </Router>
+                            <td>{item.pqty}</td>                          
+                            <td><a href="#"><button className="btn btn-outline-primary btn-sm">Details</button></a></td>
+                            <td><a href="#"><button className="btn btn-outline-secondary btn-sm">Update</button></a></td>
+                            <td><a href="#"><button className="btn btn-outline-danger btn-sm">Delete</button></a></td>
                         </tr>
                     ))}                        
                     </tbody>
