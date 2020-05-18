@@ -13,7 +13,7 @@ export default class Slider extends Component {
                 <section class="jumbotron text-center">
                   <div class="container">
                     <h1 style={{fontSize:"60px"}}><b>Admin Dashboard</b></h1>
-                    <h4>Welcome Pasindu </h4><br />              
+                    <h4>Welcome Dilanjan </h4><br />
                     <p class="lead text-muted"><b>Current Date: {date} </b></p>                
                     <p>
                       <a href="#" class="btn btn-primary my-2">Add Category</a>

@@ -10,6 +10,7 @@ require('dotenv/config');
 const productRoute = require('./Routes/product');
 const CartRoute = require('./routes/shoppingCart');
 const wishListRouter = require('./routes/wishList');
+const categoryRoute = require('./Routes/category');
 
 //middleware
 app.use(bodyparser.json());
@@ -17,6 +18,7 @@ app.use(cors());
 app.use('/product',productRoute);
 app.use('/cart',CartRoute);
 app.use('/wishlist',wishListRouter);
+app.use('/category',categoryRoute);
 
 //get
 app.get('/',(req,res)=>{

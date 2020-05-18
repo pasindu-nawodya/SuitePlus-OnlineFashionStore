@@ -14,7 +14,6 @@ export default class Dashboard extends Component {
         return (
 
             <div>
-            <NavBar />
             <Slider />
             <div class="container">
             <Cards body={value} />

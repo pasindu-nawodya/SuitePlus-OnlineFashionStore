@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt,faUser } from '@fortawesome/free-solid-svg-icons';
+import {Link} from "react-router-dom";
 
 export default class NavBar extends Component {
     render() {
         return (
 
             <nav class="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#008272"}}>
-            
-                <a class="navbar-brand text-white" href="#"><b>SuitePlus</b></a>
+
+    <Link to="/"><div className="navbar-brand text-white"><b>SuitePlus</b></div></Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,13 +25,13 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li class="nav-item active">
-                            <a class="nav-link text-white" href="#"><b>Dashboard </b><span class="sr-only">(current)</span></a>
+            <Link to="/"><div className="nav-link text-white"><b>Dashboard </b><span className="sr-only">(current)</span></div></Link>
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li class="nav-item active">
-                            <a class="nav-link text-white" href="#"><b>Category List</b><span class="sr-only">(current)</span></a>
+            <Link to="/categoryList"><div className="nav-link text-white"><b>Category List </b><span className="sr-only">(current)</span></div></Link>
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -41,11 +42,12 @@ export default class NavBar extends Component {
                                     <b>Admin Operation</b>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Add Category</a>
-                                    <a class="dropdown-item" href="#">Add StockManager</a>
+            <Link to="/addcategory" ><div className="dropdown-item">Add Category</div></Link>
+            <Link to="/categoryList"><div className="dropdown-item" >Add StockManager</div></Link>
+
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Remove Category</a>
-                                    <a class="dropdown-item" href="#">Remove StockManager</a>
+            <Link to="/categoryList" ><div className="dropdown-item">Remove Category</div></Link>
+        <Link to="/categoryList"><div className="dropdown-item" >Remove StockManager</div></Link>
 
                                 </div>
                             </li>
