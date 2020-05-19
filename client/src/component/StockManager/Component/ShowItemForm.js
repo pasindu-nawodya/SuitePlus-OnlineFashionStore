@@ -25,8 +25,10 @@ export default class ShowItemForm extends Component {
         }
   
         componentDidMount(){
+
+            var pid= '5ebc21f781d29b24e4114338';
   
-          fetch('http://localhost:4000/product/5ebc21f781d29b24e4114338')
+          fetch('http://localhost:4000/product/'+pid)
           .then(res=>res.json())
           .then(json=>{
               this.setState({
