@@ -11,6 +11,7 @@ const productRoute = require('./Routes/product');
 const CartRoute = require('./routes/shoppingCart');
 const wishListRouter = require('./routes/wishList');
 const categoryRoute = require('./Routes/category');
+const paymentRoute = require('./Routes/payment');
 
 //middleware
 app.use(bodyparser.json());
@@ -19,6 +20,7 @@ app.use('/product',productRoute);
 app.use('/cart',CartRoute);
 app.use('/wishlist',wishListRouter);
 app.use('/category',categoryRoute);
+app.use('/payment', paymentRoute);
 
 //get
 app.get('/',(req,res)=>{
