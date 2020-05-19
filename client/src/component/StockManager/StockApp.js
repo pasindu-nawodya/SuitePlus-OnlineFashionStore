@@ -5,19 +5,26 @@ import AddItem from './AddItem';
 import Dashboard from './Dashboard';
 import LoginStockMan from './LoginStockMan';
 import NavBar from './Component/NavBar';
+import ShowItem from './ShowItem'
 
-export default class Appfunction extends Component {
-    render(){
-        return (
-            <div>  
-                <Router>                       
+/*
+                 <Router>                       
                     <NavBar />
                     <Switch>
                         <Route path="/" exact component={Dashboard}/>
                         <Route path="/additem" component={AddItem}/>
                         <Route path="/productList" component={ProductListTable}/>
                     </Switch>
-                </Router>            
+                 </Router>
+
+
+*/
+
+export default class Appfunction extends Component {
+    render(){
+        return (
+            <div>  
+                  <ShowItem />
             </div>
         );
     }

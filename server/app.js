@@ -11,7 +11,11 @@ const productRoute = require('./Routes/product');
 const CartRoute = require('./routes/shoppingCart');
 const wishListRouter = require('./routes/wishList');
 const categoryRoute = require('./Routes/category');
+<<<<<<< HEAD
 const stockManagerRoute = require('./Routes/stockManager');
+=======
+const paymentRoute = require('./Routes/payment');
+>>>>>>> a7d0700bb23c468c1b77796b20f88ad0baaffc42
 
 //middleware
 app.use(bodyparser.json());
@@ -20,7 +24,11 @@ app.use('/product',productRoute);
 app.use('/cart',CartRoute);
 app.use('/wishlist',wishListRouter);
 app.use('/category',categoryRoute);
+<<<<<<< HEAD
 app.use('/stockManager',stockManagerRoute);
+=======
+app.use('/payment', paymentRoute);
+>>>>>>> a7d0700bb23c468c1b77796b20f88ad0baaffc42
 
 //get
 app.get('/',(req,res)=>{
