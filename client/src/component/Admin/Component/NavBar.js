@@ -35,7 +35,13 @@ export default class NavBar extends Component {
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-   
+
+        <li class="nav-item active">
+            <Link to="/stockManagerList"><div className="nav-link text-white"><b>StockManager List </b><span className="sr-only">(current)</span></div></Link>
+        </li>
+
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item dropdown active" >                                
                                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,11 +49,11 @@ export default class NavBar extends Component {
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <Link to="/addcategory" ><div className="dropdown-item">Add Category</div></Link>
-            <Link to="/categoryList"><div className="dropdown-item" >Add StockManager</div></Link>
+            <Link to="/addstockManager"><div className="dropdown-item" >Add StockManager</div></Link>
 
                                     <div class="dropdown-divider"></div>
             <Link to="/categoryList" ><div className="dropdown-item">Remove Category</div></Link>
-        <Link to="/categoryList"><div className="dropdown-item" >Remove StockManager</div></Link>
+            <Link to="/stockManagerList"><div className="dropdown-item" >Remove StockManager</div></Link>
 
                                 </div>
                             </li>

@@ -11,6 +11,7 @@ const productRoute = require('./Routes/product');
 const CartRoute = require('./routes/shoppingCart');
 const wishListRouter = require('./routes/wishList');
 const categoryRoute = require('./Routes/category');
+const stockManagerRoute = require('./Routes/stockManager');
 
 //middleware
 app.use(bodyparser.json());
@@ -19,6 +20,7 @@ app.use('/product',productRoute);
 app.use('/cart',CartRoute);
 app.use('/wishlist',wishListRouter);
 app.use('/category',categoryRoute);
+app.use('/stockManager',stockManagerRoute);
 
 //get
 app.get('/',(req,res)=>{
