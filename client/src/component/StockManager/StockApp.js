@@ -5,7 +5,7 @@ import AddItem from './AddItem';
 import Dashboard from './Dashboard';
 import LoginStockMan from './LoginStockMan';
 import NavBar from './Component/NavBar';
-//import ShowItem from './ShowItem';
+import ShowItem from './ShowItem';
 //import UpdateItem from './UpdateItem';
 
 /*
@@ -26,7 +26,7 @@ export default class Appfunction extends Component {
         return (
             <div>  
             <Router>                       
-                <NavBar />
+            <NavBar />
                 <Switch>
                     <Route path="/" exact component={Dashboard}/>
                     <Route path="/additem" component={AddItem}/>

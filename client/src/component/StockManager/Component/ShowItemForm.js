@@ -36,8 +36,7 @@ export default class ShowItemForm extends Component {
                   items:json,                  
               })  
               console.log(json)
-          });
-  
+          }); 
           
       }
   
