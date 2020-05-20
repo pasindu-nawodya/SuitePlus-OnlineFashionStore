@@ -52,8 +52,9 @@ class PaymentForm extends Component{
         };
         console.log('payment successful');
         console.log(payment);
-        axios.post('http://localhost:5000/payments/add', payment).then(res => console.log(res.data));
-        window.location = '/history';
+        axios.post('http://localhost:4000/payment/add', payment).then(res => console.log(res.data));
+        window.location = '/payment/history';
+
     }
 
 
