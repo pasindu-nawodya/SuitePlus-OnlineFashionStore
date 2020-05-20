@@ -26,8 +26,8 @@ const cartSchema = mongoose.Schema({
         required:true
     },
     image:{
-        type: Buffer
-
+        type:String,
+        required:true
     },
     price:{
         type:Number,

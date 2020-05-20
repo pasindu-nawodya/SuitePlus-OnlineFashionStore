@@ -7,6 +7,7 @@ import LoginStockMan from './LoginStockMan';
 import NavBar from './Component/NavBar';
 //import UpdateItem from './UpdateItem';
 
+
 /*
                  <Router>                       
                     <NavBar />

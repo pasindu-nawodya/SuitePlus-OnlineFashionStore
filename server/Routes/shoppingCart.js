@@ -8,8 +8,7 @@ const fs = require('fs');
 
 //add products to cart
 router.post('/',(req,res)=>{
-    let buff = new Buffer(req.body.image, 'base64');
-console.log(buff);
+
     const cart = new Cart({
 
         userId :req.body.userId,
@@ -18,7 +17,7 @@ console.log(buff);
         quantity:req.body.quantity,
         size:req.body.size,
         colour:req.body.colour,
-        image:buff,
+        image:req.body.image,
         price:req.body.price
 
     });
@@ -39,7 +38,7 @@ router.get('/:userId',async(req,res)=>{
 
     try {
         let ItemList = [];
-        const cart = await Cart.find({userId: req.params.userId});
+        const cart = await Cart.find({"userId": req.params.userId});
 
         ItemList = cart;
         await res.json(ItemList);

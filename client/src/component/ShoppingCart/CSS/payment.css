@@ -7,18 +7,9 @@
     text-align: center;
 
 
-}
-.col-md-4 {
-    padding: 0.5rem;
-    background-color:#93cfc9 ;
-    border: 1px solid #fff;
-    color: #fff;
-    text-align: center;
-    height: 80px;
-    width: 400px;
-    align-items: center;
 
 }
+
 
 .col-md-8 {
     padding: 0.5rem;
@@ -28,6 +19,17 @@
     text-align: center;
     height: 80px;
     width: 400px;
+}
+.checkoutBox{
+    padding: 0.5rem;
+    background-color:#93cfc9;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    height: 80px;
+    width: 400px;
+    align-items: center;
+
 }
 
 .text{

@@ -6,7 +6,8 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'
 import CartItems from "./Components/itemList";
 import PaymentBox from "./Components/payment";
-
+import {withRouter} from'react-router-dom';
+import {height} from "@fortawesome/free-solid-svg-icons/faAd";
 
 
 class MainComponent extends React.Component{
@@ -17,7 +18,7 @@ class MainComponent extends React.Component{
             numOfItems:0,
             price:0,
             totalPrice:0,
-            isCartEmpty:false
+
         }
     }
 
@@ -78,8 +79,9 @@ class MainComponent extends React.Component{
 
 
                     <CartItems  numItems = {this.getNumOfItems} tprice = {this.getTotalPrice}  ></CartItems>
-                    <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
 
+
+            <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
                 </Container>
 
 

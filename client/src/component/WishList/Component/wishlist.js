@@ -6,32 +6,46 @@ import 'mdbreact/dist/css/mdb.css'
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {MDBBtn} from "mdbreact";
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText } from 'mdbreact';
+import { withRouter } from 'react-router-dom';
+
+
 class WishList extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             wishlist: [],
-            isEmpty:false
+            isEmpty:true,
+            loading:true
 
         }
     }
 
     callAPI = async () => {
 
-        await fetch('http://localhost:4000/wishlist/101')
+        await fetch('http://localhost:4000/wishlist/106')
             .then(res => res.json())
             .then(json => this.setState({
-                wishlist: json
+                wishlist: json,
+                loading:false
             }));
+        if(this.state.wishlist == ""){
 
+            await this.setState({
+                isEmpty:true
+            });
+        }else{
+            await this.setState({
+                isEmpty:false
+            });
+        }
 
     }
 
     componentWillMount() {
         this.callAPI();
-        //console.log("render");
+
+
 
     }
 
@@ -72,9 +86,19 @@ class WishList extends React.Component {
         let itemToBeAdd = list.find((item)=>item._id == id);
         let remainingItem = list.filter((item) => item._id !== id);
 
-        this.setState({
-            wishlist: remainingItem
-        });
+        if(remainingItem == "") {
+            this.setState({
+                wishlist: remainingItem,
+                isEmpty: true
+            });
+        }else{
+
+            this.setState({
+                wishlist: remainingItem,
+                isEmpty: false
+            });
+
+        }
 
         //-------delete item from wishlist---
         console.log("came");
@@ -83,6 +107,7 @@ class WishList extends React.Component {
             headers: { 'Content-Type': 'application/json' },
 
         };
+
 
         fetch('http://localhost:4000/wishlist/'+id,requestOptions);
         //----add item to cart---------
@@ -93,21 +118,37 @@ class WishList extends React.Component {
         };
         fetch('http://localhost:4000/cart/',addOptions);
 
+        alert("Item has added to shopping cart succesfully");
+
 
 
     }
+
+
+
     render() {
+        if(this.state.loading == true){
+            return(
+                <center>
+                <div className="spinner-border text-danger" role="status">
+                <span className="sr-only">Loading...</span>
+            </div>
+            </center>
+        );
+
+        }
         if (this.state.isEmpty == true) {
 
             return (<div className="emptyList">
                 <br/> <br/>
+
                 <center>
 
                     <div className="card" >
                         <br/>
                         <span> <img src={require('../images/sad.png')} className="sadimage"/>
-                  <p className="empty">You don't have any items in your wish List. Let's get shopping!</p></span>
-                        <MDBBtn color="cyan" style = {{color:"white"}}>Start Shopping</MDBBtn>
+                  <p className="empty">&nbsp;You don't have any items in your wish List. Let's get shopping!&nbsp;</p></span>
+                        <MDBBtn color="cyan" style = {{color:"white"}} onClick = {this.newfunction}>Start Shopping</MDBBtn>
 
 
                     </div>
@@ -118,7 +159,7 @@ class WishList extends React.Component {
 
 
             </div>);
-        } else {
+        } else if(this.state.isEmpty == false) {
             return (
 
                 <Container className="list">

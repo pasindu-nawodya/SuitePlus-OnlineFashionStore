@@ -5,6 +5,7 @@ import { MDBBtn } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'
+
 class PaymentBox extends React.Component{
 
 
@@ -44,12 +45,12 @@ class PaymentBox extends React.Component{
 
                 <div className="test">
 
-                    <MDBContainer>
+                    <MDBContainer className = "t">
                         <h4>Order Summary</h4>
                         <MDBRow>
 
 
-                            <MDBCol md="8" className="text">
+                            <MDBCol  className="col-md-8">
 
                                 <MDBRow>
                                     <div className="left">Number of Items</div>
@@ -62,7 +63,10 @@ class PaymentBox extends React.Component{
 
 
                             </MDBCol>
-                            <MDBCol md="4"><MDBBtn color="dark-green">Check Out</MDBBtn></MDBCol>
+
+                            <MDBCol className = "checkoutBox">
+                              <MDBBtn color="dark-green">Check Out</MDBBtn>
+                           </MDBCol>
 
                         </MDBRow>
                     </MDBContainer>

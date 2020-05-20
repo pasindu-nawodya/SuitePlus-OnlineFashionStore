@@ -2,12 +2,6 @@ const express = require('express');
 const router = express.Router();
 const wishList = require('../Models/wishlist');
 
-
-router.get('/',async(req,res)=>{
-
-    res.send("Hello");
-
-});
 //---get wishList -------------
 router.get('/:userId',async(req,res)=>{
 
@@ -25,7 +19,7 @@ router.get('/:userId',async(req,res)=>{
 });
 //------add items to wishlist------
     router.post('/',async (req,res)=>{
-        let buff = new Buffer(req.body.image, 'base64');
+
 
         try{
 
@@ -36,7 +30,7 @@ router.get('/:userId',async(req,res)=>{
                 "quantity":req.body.quantity,
                 "size":req.body.size,
                 "colour":req.body.colour,
-                "image":buff,
+                "image":req.body.image,
                 "price":req.body.price
             });
 
