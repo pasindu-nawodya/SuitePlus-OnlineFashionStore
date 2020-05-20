@@ -1,4 +1,5 @@
 import React from "react";
+import { MDBBtn } from "mdbreact";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
@@ -6,7 +7,7 @@ import 'mdbreact/dist/css/mdb.css'
 import '../CSS/itemList.css';
 import Container from 'react-bootstrap/Container'
 import Button from "react-bootstrap/esm/Button";
-import { MDBBtn } from "mdbreact";
+
 
 
 class CartItems extends React.Component{
@@ -19,23 +20,32 @@ class CartItems extends React.Component{
             numOfItems: 0,
             myCart:[],
             totalPrice:0,
-            isEmpty:false
+            isEmpty:true,
+            loading:true
         }
 
     }
     callAPI = async ()=>  {
 
-        await fetch("http://localhost:4000/cart/100")
+        await fetch("http://localhost:4000/cart/102")
             .then(res => res.json())
-            .then(json => this.setState({   myCart:json}));
+            .then(json => this.setState({
+                myCart:json,
+                loading:false
+            }));
         this.getNumberOfItems();
         this.calTotalprice();
+
+
         if(this.state.myCart == ""){
-            // console.log("empty");
-            this.setState({isEmpty:true});
 
+            await this.setState({isEmpty:true});
+
+        }else {
+            await this.setState({
+                isEmpty: false
+            });
         }
-
         this.props.numItems(this.state.numOfItems);
         this.props.tprice(this.state.totalPrice);
         //this.props.carts(this.state.myCart);
@@ -227,6 +237,17 @@ class CartItems extends React.Component{
 
     render() {
         let list = this.state.myCart;
+        if(this.state.loading == true){
+        return(
+         <center>
+           <div className="spinner-border text-danger" role="status">
+                <span className="sr-only">Loading...</span>
+            </div>
+            </center>
+         );
+
+        }
+
         if (this.state.isEmpty == true) {
 
             return (

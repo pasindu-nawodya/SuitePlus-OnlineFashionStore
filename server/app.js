@@ -8,8 +8,8 @@ require('dotenv/config');
 
 //import routes
 const productRoute = require('./Routes/product');
-const CartRoute = require('./routes/shoppingCart');
-const wishListRouter = require('./routes/wishList');
+const CartRoute = require('./Routes/shoppingCart');
+const wishListRouter = require('./Routes/wishList');
 const categoryRoute = require('./Routes/category');
 const paymentRoute = require('./Routes/payment');
 

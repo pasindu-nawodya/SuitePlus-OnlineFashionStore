@@ -6,7 +6,6 @@ import Dashboard from './Dashboard';
 import LoginStockMan from './LoginStockMan';
 import NavBar from './Component/NavBar';
 import ShowItem from './ShowItem'
-
 /*
                  <Router>                       
                     <NavBar />

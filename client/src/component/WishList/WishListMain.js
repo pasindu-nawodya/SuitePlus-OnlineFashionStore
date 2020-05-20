@@ -1,9 +1,11 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
 import './CSS/WishListMain.css';
+import {Link} from'react-router-dom';
 
 import WishList from "./Component/wishlist";
-
+import {MDBBtn} from "mdbreact";
+import {withRouter} from'react-router-dom';
 
 
 class MainComponent extends React.Component{
@@ -16,11 +18,14 @@ class MainComponent extends React.Component{
     }
 
 
+
     render() {
 
 
         return (
             <div>
+
+
                 <link href='https://fonts.googleapis.com/css?family=Cherry Cream Soda' rel='stylesheet'/>
                 <link href='https://fonts.googleapis.com/css?family=Alike' rel='stylesheet'/>
                 <link href='https://fonts.googleapis.com/css?family=Asul' rel='stylesheet'/>
