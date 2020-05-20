@@ -11,6 +11,7 @@ const productRoute = require('./Routes/product');
 const CartRoute = require('./Routes/shoppingCart');
 const wishListRouter = require('./Routes/wishList');
 const categoryRoute = require('./Routes/category');
+const stockManagerRoute = require('./Routes/stockManager');
 const paymentRoute = require('./Routes/payment');
 
 //middleware
@@ -20,6 +21,7 @@ app.use('/product',productRoute);
 app.use('/cart',CartRoute);
 app.use('/wishlist',wishListRouter);
 app.use('/category',categoryRoute);
+app.use('/stockManager',stockManagerRoute);
 app.use('/payment', paymentRoute);
 
 //get

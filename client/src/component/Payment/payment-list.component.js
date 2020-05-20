@@ -25,7 +25,7 @@ class ListPayment extends Component{
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/payments/').then(response => {
+        axios.get('http://localhost:4000/payment/').then(response => {
             this.setState({
                 payments:response.data
             })
@@ -33,7 +33,7 @@ class ListPayment extends Component{
     }
 
     deletePayment(id){
-        axios.delete('http://localhost:5000/payments/'+id).then(res => console.log(res.data));
+        axios.delete('http://localhost:4000/payment/'+id).then(res => console.log(res.data));
         this.setState({
             payments: this.state.payments.filter(el => el._id !== id)
         });

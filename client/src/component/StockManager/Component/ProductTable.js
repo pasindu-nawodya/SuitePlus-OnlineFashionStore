@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
+import axios from 'axios';
 import UpdateItem from '../UpdateItem';
 import {BrowserRouter as Router , Switch , Route } from 'react-router-dom';
 import {Link} from 'react-router-dom';
@@ -13,8 +14,8 @@ export default class ProductTable extends Component {
         }
     }
 
+    
     componentDidMount(){
-
         fetch('http://localhost:4000/product')
         .then(res=>res.json())
         .then(json=>{
@@ -25,6 +26,19 @@ export default class ProductTable extends Component {
             })
         });
     }
+        
+    handleSubmit(pid){   
+        
+        
+       alert("deleted");
+
+       axios.delete(`http://localhost:4000/product/`+pid)
+         .then(res => {
+           console.log(res);
+           console.log(res.data);
+         })
+         
+      }
 
     render() {
 
@@ -56,13 +70,16 @@ export default class ProductTable extends Component {
                     </thead>
                     <tbody>
                     {items.map(item=>(
-                        <tr key={item._id}>
+                        <tr key={item._id} >
+                        
                             <th scope="row">{++count}</th>
                             <td>{item.pname}</td>
                             <td>{item.pqty}</td>                          
                             <td><a href="#"><button className="btn btn-outline-primary btn-sm">Details</button></a></td>
-                            <td><a href="#"><button className="btn btn-outline-secondary btn-sm">Update</button></a></td>
-                            <td><a href="#"><button className="btn btn-outline-danger btn-sm">Delete</button></a></td>
+                            <td><a href="#"><button type="submit" className="btn btn-outline-secondary btn-sm">Update</button></a></td>
+                            <td><button onClick={() => this.handleSubmit(item._id)} className="btn btn-outline-danger btn-sm">Delete</button>
+                            </td>
+
                         </tr>
                     ))}                        
                     </tbody>
