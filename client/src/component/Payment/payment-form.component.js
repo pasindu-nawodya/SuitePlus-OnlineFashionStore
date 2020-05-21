@@ -10,8 +10,10 @@ class PaymentForm extends Component{
 
         this.state = {
             name:'',
-            cardnumber:null,
-            cvv:null,
+            address:'',
+            contact:'',
+            cardnumber:'',
+            cvv:'',
             expdate:new Date(),
         };
 
@@ -20,6 +22,18 @@ class PaymentForm extends Component{
     onChangeName(e){
         this.setState({
             name:e.target.value
+        });
+    }
+
+    onChangeAddress(e){
+        this.setState({
+            address:e.target.value
+        });
+    }
+
+    onChangeContact(e){
+        this.setState({
+            contact:e.target.value
         });
     }
 
@@ -46,6 +60,8 @@ class PaymentForm extends Component{
 
         let payment = {
             name:this.state.name,
+            address:this.state.address,
+            contact:this.state.contact,
             cardnumber:this.state.cardnumber,
             cvv:this.state.cvv,
             expdate:this.state.expdate
@@ -64,13 +80,25 @@ class PaymentForm extends Component{
     render() {
 
         return(
-            <div>
-                <h3>Make new payment</h3>
+            <div className="container">
+
+                <h3>Make payment</h3>
+
                 <form onSubmit={this.onSubmit.bind(this)}>
 
                     <div className="form-group">
                         <label>Your Full Name : </label>
                         <input type="text" required className="form-control" onChange={this.onChangeName.bind(this)} value={this.state.name} />
+                    </div>
+
+                    <div className="form-group">
+                        <label>Address : </label>
+                    <input type="text" required className="form-control" onChange={this.onChangeAddress.bind(this)} value={this.state.address} />
+                    </div>
+
+                    <div className="form-group">
+                        <label>Contact : </label>
+                    <input type="number" required className="form-control" onChange={this.onChangeContact.bind(this)} value={this.state.contact} />
                     </div>
 
                     <div className="form-group">
