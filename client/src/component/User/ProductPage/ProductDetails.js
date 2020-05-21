@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import image from './img/shirt.jpg';
+import Selected from './SelectedProduct';
+import { faCartPlus,faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class ProductDetails extends Component {
 
@@ -86,8 +89,8 @@ export default class ProductDetails extends Component {
                                         <th>Tags :</th>
                                         <th>
                                             <h5>
-                                                <span class="badge badge-secondary">{items.pcategory}</span>&nbsp;|&nbsp;
-                                                 <span class="badge badge-secondary">{items.prange}</span>
+                                                <span className="badge badge-secondary">{items.pcategory}</span>&nbsp;|&nbsp;
+                                                 <span className="badge badge-secondary">{items.prange}</span>
                                             </h5>
                                         </th>
                                     </tr>  
@@ -98,8 +101,8 @@ export default class ProductDetails extends Component {
                                     <tr>                                        
                                         <th colSpan="2">
                                             <center>
-                                                <button className="btn btn-success mr-3">&nbsp;&nbsp; ADD TO CART &nbsp;&nbsp;</button>
-                                                <button className="btn btn-danger ml-3">ADD TO WISHLIST</button>
+                                                <button className="btn btn-success mr-3">&nbsp;&nbsp;<FontAwesomeIcon className="faicons" icon={faCartPlus} /> &nbsp; ADD TO CART &nbsp;&nbsp;</button>
+                                                <button className="btn btn-danger ml-3"><FontAwesomeIcon className="faicons" icon={faHeart} />&nbsp;ADD TO WISHLIST</button>
                                             </center>
                                         </th>
                                     </tr>                         
@@ -109,6 +112,8 @@ export default class ProductDetails extends Component {
                         </div>
                     </section>
                 </main>
+                
+                <Selected/>
             </div>
         )
     }

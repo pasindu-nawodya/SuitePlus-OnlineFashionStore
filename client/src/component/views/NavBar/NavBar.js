@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignOutAlt,faUser } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt,faUser} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
 export default class NavBar extends Component {
@@ -44,7 +44,7 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     
                     <li className="nav-item active">
-                    <Link to="/product"><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
+                    <Link to="/filterProduct"><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
                     </li>
                         
                     </ul>
