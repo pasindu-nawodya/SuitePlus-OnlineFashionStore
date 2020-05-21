@@ -6,9 +6,13 @@ let Payment = props => (
     <tr>
         <td>{props.payment.name}</td>
         <td>{props.payment.cardnumber}</td>
+        <td>{props.payment.cvv}</td>
+        <td>{props.payment.expdate.substring(0,10)}</td>
         <td>{props.payment.createdAt.substring(0,10)}</td>
+        <td>{props.payment.createdAt.substring(11,19)} H</td>
         <td>
             <button type="button" class="btn btn-outline-danger" onClick={()=> {props.deletePayment(props.payment._id)}}>Delete record</button>
+            <button type="button" class="btn btn-outline-warning ml-3" >Change record</button>
         </td>
     </tr>
 )
@@ -56,7 +60,10 @@ class ListPayment extends Component{
                     <tr>
                         <th>Customer Name</th>
                         <th>Credit card number</th>
+                        <th>CVV</th>
+                        <th>Expire Date</th>
                         <th>Purchased Date</th>
+                        <th>Purchased Time</th>
                         <th>Purchased Item</th>
                         <th>Amount</th>
                     </tr>
