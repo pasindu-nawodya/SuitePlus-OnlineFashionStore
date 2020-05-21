@@ -1,21 +1,28 @@
 import React, {Component} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom"
+
 
 // output table that refer with database columns
+
 let Payment = props => (
+
     <tr>
         <td>{props.payment.name}</td>
+        <td>{props.payment.address}</td>
+        <td>{props.payment.contact}</td>
         <td>{props.payment.cardnumber}</td>
         <td>{props.payment.cvv}</td>
         <td>{props.payment.expdate.substring(0,10)}</td>
         <td>{props.payment.createdAt.substring(0,10)}</td>
-        <td>{props.payment.createdAt.substring(11,19)} H</td>
         <td>
-            <button type="button" class="btn btn-outline-danger" onClick={()=> {props.deletePayment(props.payment._id)}}>Delete record</button>
-            <button type="button" class="btn btn-outline-warning ml-3" >Change record</button>
-        </td>
+            <button type="button" className="btn btn-outline-danger" onClick={()=> {props.deletePayment(props.payment._id)}}>Delete record</button>
+            <button type="button" className="btn btn-outline-warning"><Link to={'/payment/edit/'+props.payment._id}>Change record</Link></button>
+        </td>    
     </tr>
+
 )
+
 
 class ListPayment extends Component{
 
@@ -27,6 +34,7 @@ class ListPayment extends Component{
       };
 
     }
+
 
     componentDidMount() {
         axios.get('http://localhost:4000/payment/').then(response => {
@@ -52,18 +60,20 @@ class ListPayment extends Component{
     render() {
 
         return(
-            <div>
+
+            <div className="container">
                 <h3>Payment Log</h3>
                 <br/>
                 <table className="table">
                     <thead className="thead-light">
                     <tr>
                         <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Contact</th>
                         <th>Credit card number</th>
                         <th>CVV</th>
                         <th>Expire Date</th>
                         <th>Purchased Date</th>
-                        <th>Purchased Time</th>
                         <th>Purchased Item</th>
                         <th>Amount</th>
                     </tr>
