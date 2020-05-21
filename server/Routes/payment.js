@@ -9,12 +9,16 @@ router.route('/').get((req, res) =>{
 // add payment
 router.route('/add').post((req, res)=>{
     let name = req.body.name;
+    let address = req.body.address;
+    let contact = Number(req.body.contact);
     let cardnumber = Number(req.body.cardnumber);
     let cvv = Number(req.body.cvv);
     let expdate = Date.parse(req.body.expdate);
 
     let newPayment = new Payment({
         name,
+        address,
+        contact,
         cardnumber,
         cvv,
         expdate,
@@ -38,6 +42,8 @@ router.route('/:id').delete((req, res) =>{
 router.route('/update/:id').post((req, res) =>{
     Payment.findById(req.params.id).then(payments => {
         payments.name = req.body.name;
+        payments.address = req.body.address;
+        payments.contact = Number(req.body.contact);
         payments.cardnumber = Number(req.body.cardnumber);
         payments.cvv = Number(req.body.cvv);
         payments.expdate = Date.parse(req.body.expdate);

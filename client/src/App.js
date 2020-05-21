@@ -9,12 +9,11 @@ import React from 'react';
 //import Payment from "./component/Payment/paymentMain";
 import UserApp from './component/UserApp'
 
+
 function App() {
   return (
      <div>
-
       <UserApp />
-
     </div>
 
   );
