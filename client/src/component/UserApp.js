@@ -5,6 +5,7 @@ import Home from './User/HomePage/Home';
 import AllProduct from './User/ProductPage/AllProduct';
 import FilterProduct from './User/ProductPage/FilterProduct';
 import DiscountProduct from './User/ProductPage/DiscoutProduct'
+import ProductDetails from './User/ProductPage/ProductDetails'
 
 
 /*
@@ -28,7 +29,7 @@ export default class Appfunction extends Component {
                 <NavBar />
                 <Switch>
                     <Route path="/" exact component={Home}/>
-                    <Route path="/product" component={AllProduct}/>
+                    <Route path="/product" component={ProductDetails}/>
                     <Route path="/filterProduct" component={FilterProduct}/>
                     <Route path="/discount" component={DiscountProduct}/>
                 </Switch>
