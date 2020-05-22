@@ -12,7 +12,7 @@ function Payment() {
 
     return(
         <Router>
-            <div className="container">
+            <div>
             <Navbar />
             <br/>
                 <Route path="/payment/add" exact component={PaymentForm} />

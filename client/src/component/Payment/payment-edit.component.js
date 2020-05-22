@@ -8,8 +8,10 @@ class EditPayment extends Component{
         super(props);
 
         this.state = {
-            name:'',
-            address:'',
+            fname:'',
+            lname:'',
+            fline:'',
+            Lline:'',
             contact:'',
             cardnumber:'',
             cvv:'',
@@ -22,8 +24,10 @@ class EditPayment extends Component{
         axios.get('http://localhost:4000/payment/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
-                    name:response.data.name,
-                    address:response.data.address,
+                    fname:response.data.fname,
+                    lname:response.data.lname,
+                    fline:response.data.fline,
+                    Lline:response.data.Lline,
                     contact:response.data.contact,
                     cardnumber:response.data.cardnumber,
                     cvv:response.data.cvv,
@@ -32,17 +36,30 @@ class EditPayment extends Component{
             }).catch(function (err) {
                 console.log(err);
             })
+        console.log('data fetched from db');    
     }
 
-    onChangeName(e){
+    onChangeFirstName(e){
         this.setState({
-            name:e.target.value
+            fname:e.target.value
         });
     }
 
-    onChangeAddress(e){
+    onChangeLastName(e){
         this.setState({
-            address:e.target.value
+            lname:e.target.value
+        });
+    }
+
+    onChangeFlineAddress(e){
+        this.setState({
+            fline:e.target.value
+        });
+    }
+
+    onChangeLlineAddress(e){
+        this.setState({
+            Lline:e.target.value
         });
     }
 
@@ -74,14 +91,16 @@ class EditPayment extends Component{
         e.preventDefault();
 
         let payment = {
-            name:this.state.name,
-            address:this.state.address,
+            fname:this.state.fname,
+            lname:this.state.lname,
+            fline:this.state.fline,
+            Lline:this.state.Lline,
             contact:this.state.contact,
             cardnumber:this.state.cardnumber,
             cvv:this.state.cvv,
             expdate:this.state.expdate
         };
-        console.log('payment successful');
+        console.log('payment update successful');
         console.log(payment);
         axios.post('http://localhost:4000/payment/update/'+this.props.match.params.id, payment).then(res => console.log(res.data));
         window.location = '/payment/history';
@@ -103,27 +122,47 @@ class EditPayment extends Component{
 
                         <div className="form-group">
                             <label>Your Full Name : </label>
-                            <input type="text" required className="form-control" onChange={this.onChangeName.bind(this)} value={this.state.name} />
+
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" required class="form-control" placeholder="First name" onChange={this.onChangeFirstName.bind(this)} value={this.state.fname}/>
+                                </div>
+                                <div class="col">
+                                    <input type="text" required class="form-control" placeholder="Last name" onChange={this.onChangeLastName.bind(this)} value={this.state.lname}/>
+                                </div>
+                            </div>
+
+                            
                         </div>
 
                         <div className="form-group">
                             <label>Address : </label>
-                            <input type="text" required className="form-control" onChange={this.onChangeAddress.bind(this)} value={this.state.address} />
+
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Line 1" onChange={this.onChangeFlineAddress.bind(this)} value={this.state.fline}/>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Line 2" onChange={this.onChangeLlineAddress.bind(this)} value={this.state.Lline}/>
+                                </div>
+                            </div>
+
+                            
                         </div>
 
                         <div className="form-group">
                             <label>Contact : </label>
-                            <input type="number" required className="form-control" onChange={this.onChangeContact.bind(this)} value={this.state.contact} />
+                            <input type="number" required className="form-control" placeholder="XXX XXXXXXX" onChange={this.onChangeContact.bind(this)} value={this.state.contact} />
                         </div>
 
                         <div className="form-group">
                             <label>Your Card number : </label>
-                            <input type="number" required className="form-control" onChange={this.onChangeCardnumber.bind(this)} value={this.state.cardnumber} />
+                            <input type="number" required className="form-control" placeholder="XXXX XXXX XXXX XXXX" onChange={this.onChangeCardnumber.bind(this)} value={this.state.cardnumber} />
                         </div>
 
                         <div className="form-group">
                             <label>CVV : </label>
-                            <input type="number" required className="form-control" onChange={this.onChangeCvv.bind(this)} value={this.state.cvv} />
+                            <input type="number" required className="form-control" placeholder="XXX" onChange={this.onChangeCvv.bind(this)} value={this.state.cvv} />
                         </div>
 
                         <div className="form-group">
