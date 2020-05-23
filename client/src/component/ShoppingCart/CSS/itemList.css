@@ -1,13 +1,5 @@
-.col-md-4 {
-    padding: 1rem;
-    background-color: #e6f2f0;
-    border: 1px solid #fff;
-    color: #fff;
-    text-align: center;
-    height: 150px;
-}
 
-.col-md-3 {
+.cartCol {
     padding: 1rem;
     background-color: white;
     color: black;
@@ -16,7 +8,7 @@
     height:auto;
 }
 
-.list{
+.cartlist{
     background-color: #039c87;
     width:auto;
 
@@ -102,23 +94,7 @@
 
     outline:0;
 }
-.value-button {
-    display: inline-block;
-    border: 1px solid #ddd;
-    margin: 0px;
-    width: 40px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 11px 0;
-    background: #eee;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+
 input#number {
     text-align: center;
     border: none;
@@ -133,13 +109,6 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-form {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 50px;
 }
 
 .value-button {
@@ -187,7 +156,6 @@ form {
     text-align:center;
     vertical-align: middle;
     padding: 0px 0;
-    background: #eee;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -208,7 +176,7 @@ form {
     text-align: right;
 
 }
-.card{
+.cardEmpty{
     background-color: white;
     width: 500px;
     height: auto;

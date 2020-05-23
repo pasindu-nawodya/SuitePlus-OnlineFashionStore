@@ -5,19 +5,23 @@
     padding: 5px;
     background-color: #008272;
     text-align: center;
-
+    height: auto;
 
 
 }
+.checkBtn{
 
+    width: 110px;
+    float: contour;
+}
 
-.col-md-8 {
+.columnEight {
     padding: 0.5rem;
     background-color:#93cfc9;
     border: 1px solid #fff;
     color: black;
     text-align: center;
-    height: 80px;
+    height: auto;
     width: 400px;
 }
 .checkoutBox{
@@ -26,7 +30,7 @@
     border: 1px solid #fff;
     color: #fff;
     text-align: center;
-    height: 80px;
+    height: auto;
     width: 400px;
     align-items: center;
 
