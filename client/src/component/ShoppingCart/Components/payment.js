@@ -4,8 +4,8 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import { MDBBtn } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
-
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 
 class PaymentBox extends React.Component{
 
@@ -44,14 +44,14 @@ class PaymentBox extends React.Component{
         } else {
             return (
 
-                <div className="test">
+                <Container className="test">
 
                     <MDBContainer className = "t">
                         <h4>Order Summary</h4>
                         <MDBRow>
 
 
-                            <MDBCol  className="col-md-8">
+                            <MDBCol  className="columnEight">
 
                                 <MDBRow>
                                     <div className="left">Number of Items</div>
@@ -66,14 +66,15 @@ class PaymentBox extends React.Component{
                             </MDBCol>
 
                             <MDBCol className = "checkoutBox">
-                              <MDBBtn color="dark-green">Check Out</MDBBtn>
+
+                              <Button  variant="success" className = "checkBtn">Check Out</Button>
                            </MDBCol>
 
                         </MDBRow>
                     </MDBContainer>
 
 
-                </div>
+                </Container>
 
             );
         }

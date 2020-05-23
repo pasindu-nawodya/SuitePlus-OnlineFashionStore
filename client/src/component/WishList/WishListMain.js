@@ -2,13 +2,11 @@ import React from 'react';
 import Container from 'react-bootstrap/Container'
 import './CSS/WishListMain.css';
 import {Link} from'react-router-dom';
-
 import WishList from "./Component/wishlist";
-import {MDBBtn} from "mdbreact";
 import {withRouter} from'react-router-dom';
 
 
-class MainComponent extends React.Component{
+class WishListMain extends React.Component{
 
     constructor(props){
         super(props);
@@ -41,7 +39,7 @@ class MainComponent extends React.Component{
                     <div className="title">
                         <center>
 
-                            <h1>
+                            <h1 className = "h1">
                                   <span>&nbsp;&nbsp;&nbsp;&nbsp;
                                       <img src={require('./images/paper.png')}
                                            className="heartimg"/></span>&nbsp;&nbsp;Wish List</h1>
@@ -56,7 +54,7 @@ class MainComponent extends React.Component{
 
                 </Container>
 
-
+             <br/><br/><br/><br/>
             </div>
 
         );
@@ -64,4 +62,4 @@ class MainComponent extends React.Component{
     }
 
 }
-export default MainComponent;
+export default WishListMain;
