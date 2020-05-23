@@ -16,7 +16,7 @@ export default class ProductDetails extends Component {
 
     //have to pass selected product id to here
     componentDidMount(){
-        fetch('http://localhost:4000/product/5ec544c1f3bd5f34ec2f8923')
+        fetch('http://localhost:4000/product/5ec830e0ea1ed7311c4b4a29')
         .then(res=>res.json())
         .then(json=>{
             this.setState({
@@ -68,19 +68,22 @@ export default class ProductDetails extends Component {
                                     <tr>
                                         <th>Product Name :</th>
                                         <th>{items.pname}</th>
-                                    </tr> 
+                                    </tr>                                     
+                                    <tr>
+                                        <th>Price :</th>
+                                        <th>
+                                            <p style={{color:"red"}}><strike>Rs. {items.pprice} </strike>/=</p>
+                                            Rs. {items.pprice*(100-items.pdiscount)/100}/=
+                                        </th>
+                                    </tr>                                     
                                     <tr >
-                                        <th>Product Code :</th>
-                                        <td>{items._id}</td>
-                                    </tr>
+                                        <th>Discount :</th>
+                                        <td>{items.pdiscount}%</td>
+                                    </tr> 
                                     <tr>
                                         <th>Size :</th>
                                         <th><h5><span class="badge badge-secondary">{items.psize}</span></h5></th>
                                     </tr> 
-                                    <tr>
-                                        <th>Price :</th>
-                                        <th>Rs. {items.pprice} /=</th>
-                                    </tr>  
                                     <tr>
                                         <th>Available Amount :</th>
                                         <th>{items.pqty}</th>

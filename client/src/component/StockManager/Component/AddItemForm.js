@@ -14,6 +14,7 @@ export default class AddItemForm extends Component {
         pgender:'',
         pdesc:'',
         pimage:'',
+        pdiscount:0,
 
       }
     
@@ -70,6 +71,13 @@ export default class AddItemForm extends Component {
                                         <span className="input-group-text" id="inputGroup-sizing-default">Product Price</span>
                                     </div>
                                     <input type="number" name="pprice" onChange={this.handleChange} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" required/>                                 
+                                </div>
+
+                                <div className="input-group mb-4">
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text" id="inputGroup-sizing-default">Product Discount</span>
+                                    </div>
+                                    <input type="number" name="pdiscount" onChange={this.handleChange} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" required/>                                 
                                 </div>
 
                                 <div className="input-group mb-4">

@@ -32,8 +32,8 @@ export default class Appfunction extends Component {
                 <NavBar />
                 <Switch>
                     <Route path="/" exact component={Home}/>
-                    <Route path="/product" component={ProductDetails}/>
-                    <Route path="/filterProduct" component={FilterProduct}/>
+                    <Route path="/product" component={AllProduct}/>
+                    <Route path="/filterProduct" component={ProductDetails}/>
                     <Route path="/discount" component={DiscountProduct}/>
                     <Route path="/userLogin" component={UserLogin}/>
                     <Route path="/userRegister" component={UserRegister}/>
