@@ -10,7 +10,6 @@ export default class ProductListTable extends Component {
             <div>
                 <TitleBanner TitleName={"Product List"} />
                 <ProductTable />
-                <Footer />
             </div>
         )
     }

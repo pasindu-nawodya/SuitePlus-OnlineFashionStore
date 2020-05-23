@@ -31,7 +31,7 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li className="nav-item active">
-                        <Link to="/productList"><div className="nav-link text-white"><b>Production List</b><span className="sr-only">(current)</span></div></Link>
+                        <Link to="/allitem"><div className="nav-link text-white"><b>Production List</b><span className="sr-only">(current)</span></div></Link>
                         </li>
 
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>

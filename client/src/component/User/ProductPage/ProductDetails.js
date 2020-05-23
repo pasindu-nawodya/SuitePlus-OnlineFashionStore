@@ -16,7 +16,7 @@ export default class ProductDetails extends Component {
 
     //have to pass selected product id to here
     componentDidMount(){
-        fetch('http://localhost:4000/product/5ec830e0ea1ed7311c4b4a29')
+        fetch('http://localhost:4000/product/5ec830e9ea1ed7311c4b4a2a')
         .then(res=>res.json())
         .then(json=>{
             this.setState({
