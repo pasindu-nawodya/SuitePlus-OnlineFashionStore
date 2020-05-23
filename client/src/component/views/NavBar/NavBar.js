@@ -91,10 +91,12 @@ export default class NavBar extends Component {
                                     <a className="dropdown-item" href="#">Account Setting</a>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#">
+                                    <Link to="/userLogin">
                                     <button className="btn btn-success my-2 my-sm-0" type="submit"> 
                                         <FontAwesomeIcon className="faicons" icon={faSignOutAlt} />
                                         Logout
-                                        </button>
+                                    </button>
+                                    </Link>
                                     </a>
                                 </div>
                             </li>
