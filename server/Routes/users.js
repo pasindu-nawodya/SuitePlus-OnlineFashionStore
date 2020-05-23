@@ -23,16 +23,6 @@ router.get('/:id',async (req,res)=>{
     }
 })
 
-//get specific user email
-router.get('/:email',async (req,res)=>{
-    try{
-        const specificUser = await UserDetails.findById(req.params.uemail);
-        res.json(specificUser);
-    }catch(err){
-        res.json({message:err});
-    }
-})
-
 //submit user details
 router.post('/',(req,res)=>{
     const user = new UserDetails({

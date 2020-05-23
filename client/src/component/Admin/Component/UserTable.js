@@ -145,7 +145,7 @@ export default class UserTable extends Component {
 
         <div className="input-group mb-4">
             <div className="input-group-prepend">
-            <span className="input-group-text" id="inputGroup-sizing-default">Stock Manager Name</span>
+            <span className="input-group-text" id="inputGroup-sizing-default">Name</span>
         </div>
         <input type="text" value={this.state.newItem.uname} name="uname" className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>
         </div>
