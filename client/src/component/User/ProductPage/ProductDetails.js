@@ -82,7 +82,7 @@ export default class ProductDetails extends Component {
                                     </tr> 
                                     <tr>
                                         <th>Size :</th>
-                                        <th><h5><span class="badge badge-secondary">{items.psize}</span></h5></th>
+                                        <th><h5><span class="badge badge-secondary">&nbsp;{items.psize}&nbsp;</span></h5></th>
                                     </tr> 
                                     <tr>
                                         <th>Available Amount :</th>

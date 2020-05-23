@@ -73,7 +73,7 @@ export default class AllProduct extends Component {
                                             </tr>    
                                             <tr>
                                                 <td> <h6 className="card-text"><b>Size : </b></h6></td>
-                                                <td> <h6 className="card-text"><span class="badge badge-secondary">&nbsp;&nbsp;&nbsp;{item.psize}</span></h6></td>
+                                                <td> <h6 className="card-text"><span class="badge badge-secondary">&nbsp;&nbsp;&nbsp;{item.psize}&nbsp;&nbsp;&nbsp;</span></h6></td>
                                             </tr>                                       
                                         </table>
                                         </center>

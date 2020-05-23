@@ -4,7 +4,32 @@ import { faSignOutAlt,faUser} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
 export default class NavBar extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            items:[],
+            isLoaded:false,
+        }
+    }
+
+    componentDidMount(){
+
+        fetch('http://localhost:4000/category')
+            .then(res=>res.json())
+            .then(json=>{
+                this.setState({
+                    isLoaded:true,
+                    items:json,
+                    count:0,
+                })
+            });
+    }
+
     render() {
+
+        var {isLoaded,items} = this.state;
+
         return (
 
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{backgroundColor: "#008272"}}>
@@ -34,7 +59,9 @@ export default class NavBar extends Component {
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <Link to="/product" ><div className="dropdown-item">All Product</div></Link>
-                                    <Link to="/filterProduct"><div className="dropdown-item" >T-shirts</div></Link>
+                                    {items.map(item=>(
+                                    <Link to="/filterProduct"><div className="dropdown-item" key={item._id}>{item.cdesc}</div></Link>
+                                    ))}
                                     <div className="dropdown-divider"></div>
                                     <Link to="/discount"><div className="dropdown-item">Discount Products</div></Link>                         
                                 </div>

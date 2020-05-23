@@ -15,8 +15,23 @@ export default class AddItemForm extends Component {
         pdesc:'',
         pimage:'',
         pdiscount:0,
+        items:[],
+        isLoaded:false,
 
       }
+
+      componentDidMount(){
+
+        fetch('http://localhost:4000/category')
+            .then(res=>res.json())
+            .then(json=>{
+                this.setState({
+                    isLoaded:true,
+                    items:json,
+                    count:0,
+                })
+            });
+    }
     
       handleChange = event => {
         this.setState({ 
@@ -38,6 +53,8 @@ export default class AddItemForm extends Component {
       }
 
     render() {
+
+        var {items} = this.state;
 
         return (
             <div>
@@ -93,7 +110,9 @@ export default class AddItemForm extends Component {
                                     </div>
                                     <select name="pcategory" className="custom-select" onChange={this.handleChange} id="inputGroupSelect01" required>
                                         <option selected value="null">Choose Category</option>
-                                        <option value="tshirt">t-shirt</option>
+                                        {items.map(item=>(
+                                            <option key={item._id} value={item.cname}>{item.cdesc}</option>
+                                        ))}
                                     </select>
                                 </div>
 

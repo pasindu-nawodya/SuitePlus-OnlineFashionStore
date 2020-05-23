@@ -2,7 +2,7 @@ import React from 'react';
 
 //import AdminApp from './component/Admin/AdminApp';
 //import LoginAdmin from './component/Admin/LoginAdmin';
-//import StockApp from './component/StockManager/StockApp';
+import StockApp from './component/StockManager/StockApp';
 //import ShoppingCart from './component/ShoppingCart/CartMain'
 //import WishList from './component/WishList/WishListMain'
 //import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
@@ -14,7 +14,7 @@ import UserApp from './component/UserApp'
 function App() {
   return (
      <div>
-      <UserApp />
+      <StockApp />
     </div>
 
   );
