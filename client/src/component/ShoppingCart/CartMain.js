@@ -1,6 +1,6 @@
 import React from 'react';
 import './CSS/CartMain.css';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'

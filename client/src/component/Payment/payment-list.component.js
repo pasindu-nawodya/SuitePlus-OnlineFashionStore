@@ -8,16 +8,18 @@ import {Link} from "react-router-dom"
 let Payment = props => (
 
     <tr>
-        <td>{props.payment.name}</td>
-        <td>{props.payment.address}</td>
+        <td>{props.payment.fname}</td>
+        <td>{props.payment.lname}</td>
+        <td>{props.payment.fline}</td>
+        <td>{props.payment.Lline}</td>
         <td>{props.payment.contact}</td>
         <td>{props.payment.cardnumber}</td>
         <td>{props.payment.cvv}</td>
         <td>{props.payment.expdate.substring(0,10)}</td>
         <td>{props.payment.createdAt.substring(0,10)}</td>
         <td>
-            <button type="button" className="btn btn-outline-danger" onClick={()=> {props.deletePayment(props.payment._id)}}>Delete record</button>
-            <button type="button" className="btn btn-outline-warning"><Link to={'/payment/edit/'+props.payment._id}>Change record</Link></button>
+            <button type="button" className="btn btn-outline-danger" onClick={()=> {props.deletePayment(props.payment._id)}}>Remove</button> 
+            <button type="button" className="btn btn-outline-warning ml-2"><Link to={'/payment/edit/'+props.payment._id}>Change</Link></button>
         </td>    
     </tr>
 
@@ -61,14 +63,16 @@ class ListPayment extends Component{
 
         return(
 
-            <div className="container">
+            <div>
                 <h3>Payment Log</h3>
                 <br/>
                 <table className="table">
                     <thead className="thead-light">
                     <tr>
-                        <th>Customer Name</th>
-                        <th>Address</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address Line 1</th>
+                        <th>Address Line 2</th>
                         <th>Contact</th>
                         <th>Credit card number</th>
                         <th>CVV</th>
