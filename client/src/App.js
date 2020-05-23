@@ -9,6 +9,7 @@ import React from 'react';
 //import MainComponent from './component/ShoppingCart/CartMain';
 import Payment from "./component/Payment/paymentMain";
 import UserApp from './component/UserApp'
+//import Appfunction from './component/Admin/AdminApp';
 
 
 function App() {
