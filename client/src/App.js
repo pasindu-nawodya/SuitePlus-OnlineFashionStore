@@ -1,6 +1,7 @@
 import React from 'react';
 
 //import AdminApp from './component/Admin/AdminApp';
+//import LoginAdmin from './component/Admin/LoginAdmin';
 //import StockApp from './component/StockManager/StockApp';
 //import ShoppingCart from './component/ShoppingCart/CartMain'
 //import WishList from './component/WishList/WishListMain'

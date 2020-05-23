@@ -13,6 +13,7 @@ const wishListRouter = require('./Routes/wishList');
 const categoryRoute = require('./Routes/category');
 const stockManagerRoute = require('./Routes/stockManager');
 const paymentRoute = require('./Routes/payment');
+const userRoute = require('./Routes/users');
 
 //middleware
 app.use(bodyparser.json());
@@ -23,6 +24,7 @@ app.use('/wishlist',wishListRouter);
 app.use('/category',categoryRoute);
 app.use('/stockManager',stockManagerRoute);
 app.use('/payment', paymentRoute);
+app.use('/user', userRoute);
 
 //get
 app.get('/',(req,res)=>{

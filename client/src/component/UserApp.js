@@ -6,6 +6,8 @@ import AllProduct from './User/ProductPage/AllProduct';
 import FilterProduct from './User/ProductPage/FilterProduct';
 import DiscountProduct from './User/ProductPage/DiscoutProduct';
 import ProductDetails from './User/ProductPage/ProductDetails';
+import UserLogin from './User/UserAccount/UserLogin';
+import UserRegister from './User/UserAccount/UserRegister';
 import Footer from './views/Footer/Footer'
 
 
@@ -33,6 +35,8 @@ export default class Appfunction extends Component {
                     <Route path="/product" component={ProductDetails}/>
                     <Route path="/filterProduct" component={FilterProduct}/>
                     <Route path="/discount" component={DiscountProduct}/>
+                    <Route path="/userLogin" component={UserLogin}/>
+                    <Route path="/userRegister" component={UserRegister}/>
                 </Switch>
             </Router>
             <Footer/>
