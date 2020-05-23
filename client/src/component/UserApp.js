@@ -8,7 +8,8 @@ import DiscountProduct from './User/ProductPage/DiscoutProduct';
 import ProductDetails from './User/ProductPage/ProductDetails';
 import UserLogin from './User/UserAccount/UserLogin';
 import UserRegister from './User/UserAccount/UserRegister';
-import Footer from './views/Footer/Footer'
+import Footer from './views/Footer/Footer';
+import PaymentForm from './Payment/payment-form.component'
 
 
 /*

@@ -9,14 +9,22 @@ import React from 'react';
 //import MainComponent from './component/ShoppingCart/CartMain';
 import Payment from "./component/Payment/paymentMain";
 import UserApp from './component/UserApp'
+//import MainComponent from './component/ShoppingCart/CartMain';
+//import CartItems from './component/ShoppingCart/Components/itemList';
 //import Appfunction from './component/Admin/AdminApp';
+//import PaymentBox from './component/ShoppingCart/Components/payment';
+
 
 
 function App() {
   return (
      <div>
-      <UserApp />
-      <Payment/>
+
+     
+     <UserApp/> 
+     <Payment/>
+      
+      
       
     </div>
 

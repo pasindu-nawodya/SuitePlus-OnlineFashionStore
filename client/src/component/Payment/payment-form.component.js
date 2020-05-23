@@ -156,7 +156,7 @@ class PaymentForm extends Component{
                     </div>
                     <br/>
                     <div className="form-group">
-                        <input type="submit" value="Purchase" className="btn btn-success"/>
+                        <input type="submit" value="Purchase" className="btn btn-success btn-lg"/>
                     </div>
 
 
