@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import UserLogin from './UserLogin';
 import UserRegister from './UserRegister';
+import UserAccount from './UserAccount';
 import Dashboard from './Dashboard';
 import NavBar from './Component/NavBar';
 
@@ -15,6 +16,7 @@ export default class Appfunction extends Component {
             <Route path="/" exact component={Dashboard}/>
         <Route path="/userLogin" component={UserLogin}/>
         <Route path="/userRegister" component={UserRegister}/>
+        <Route path="/userAccount" component={UserAccount}/>
         </Switch>
         </Router>
         </div>

@@ -42,7 +42,7 @@ export default class NavBar extends Component {
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">User</a>
+            <Link to ='/userAccount'><div class="dropdown-item" href="#">My Account</div></Link>
             <div class="dropdown-divider"></div>
             <Link to ='/userLogin'><div class="dropdown-item">Login</div></Link>
             <Link to ='/userRegister'><div class="dropdown-item">Register</div></Link>
