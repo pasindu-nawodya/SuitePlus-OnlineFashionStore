@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import image from './img/shirt.jpg';
+import image from '../img/shirt.jpg';
 import { faCartPlus,faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default class SelectedProduct extends Component {
-
+export default class AllItem extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -29,7 +28,7 @@ export default class SelectedProduct extends Component {
 
     render() {   
         
-        var {isLoaded,items,count} = this.state;
+        var {isLoaded,items} = this.state;
 
         if(!isLoaded){
             return (<center> 
@@ -43,15 +42,12 @@ export default class SelectedProduct extends Component {
             )
         }
         return (
-            <div>            
-                <div className="album py-5 bg-light">
-                    <div className="container">
-                        <div className="alert alert-secondary text-center" role="alert">
-                            <b>Feautured Products</b>
-                        </div>
+            <div>
+                <div className="album py-5">
+                    <div className="container">                    
                         <div className="row">
                             {/* map function */}
-                            {items.slice(0, 3).map(item=>(                                                   
+                            {items.map(item=>(                                                   
                                 <div className="col-md-4" key={item._id}>
                                     <div class="card mb-4 shadow-sm">
                                         <img src={image} className="card-img-top" alt="..."></img>
@@ -73,12 +69,7 @@ export default class SelectedProduct extends Component {
                                         </table>
                                         </center>
                                             <br />
-                                            <div className="d-flex flex-row-reverse bd-highlight"> 
-                                                <div className="btn-group">
-                                                    <button type="button" className="btn btn-sm btn-success"><FontAwesomeIcon className="faicons" icon={faCartPlus} /> &nbsp;BUY</button>
-                                                    <button type="button" className="btn btn-sm btn-danger"><FontAwesomeIcon className="faicons" icon={faHeart} />&nbsp;LOVE</button>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>                                    
                                 </div>

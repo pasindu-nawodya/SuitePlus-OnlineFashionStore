@@ -3,8 +3,7 @@ import image from './img/shirt.jpg';
 import { faCartPlus,faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default class SelectedProduct extends Component {
-
+export default class HomepageProducts extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -51,7 +50,7 @@ export default class SelectedProduct extends Component {
                         </div>
                         <div className="row">
                             {/* map function */}
-                            {items.slice(0, 3).map(item=>(                                                   
+                            {items.slice(0, 9).map(item=>(                                                   
                                 <div className="col-md-4" key={item._id}>
                                     <div class="card mb-4 shadow-sm">
                                         <img src={image} className="card-img-top" alt="..."></img>

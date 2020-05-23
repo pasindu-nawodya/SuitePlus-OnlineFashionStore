@@ -21,6 +21,7 @@ export default class ProductTable extends Component {
             pgender:'',
             pdesc:'',
             pimage:'',
+            pdiscount:0,
         }
     }
 
@@ -61,7 +62,7 @@ export default class ProductTable extends Component {
         //make post request
 
         alert('Item Updated Successfully!')
-
+        console.log(this.state.p_id)
         axios.post(`http://localhost:4000/product/`+this.state.p_id, this.state)
           .then(res => {
             console.log(res);
@@ -165,6 +166,13 @@ export default class ProductTable extends Component {
                                             </div>
                                             <input type="number" value={this.state.newItem.pprice} name="pprice" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>                                 
                                         </div>
+
+                                        <div className="input-group mb-4">
+                                            <div className="input-group-prepend">
+                                                <span className="input-group-text" id="inputGroup-sizing-default">Product Discount</span>
+                                            </div>
+                                            <input type="number" value={this.state.newItem.pdiscount} name="pprice" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>                                 
+                                        </div>
         
                                         <div className="input-group mb-4">
                                             <div className="input-group-prepend">
@@ -265,6 +273,13 @@ export default class ProductTable extends Component {
                                                 <span className="input-group-text" id="inputGroup-sizing-default">Product Price</span>
                                             </div>
                                             <input type="number" placeholder={this.state.newItem.pprice} name="pprice" onChange={this.handleChange} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />                                 
+                                        </div>
+
+                                        <div className="input-group mb-4">
+                                            <div className="input-group-prepend">
+                                                <span className="input-group-text" id="inputGroup-sizing-default">Product Discount</span>
+                                            </div>
+                                            <input type="number" placeholder={this.state.newItem.pdiscount} name="pprice" onChange={this.handleChange} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />                                 
                                         </div>
         
                                         <div className="input-group mb-4">

@@ -28,6 +28,7 @@ router.post('/',(req,res)=>{
     const product = new ProductDetails({
         pname:req.body.pname,
         pprice:req.body.pprice,
+        pdiscount:req.body.pdiscount,
         pqty:req.body.pqty,
         pcategory:req.body.pcategory,
         psize:req.body.psize,
@@ -55,6 +56,7 @@ router.post('/:id',async (req,res)=>{
             {$set : {
                     pname:req.body.pname,
                     pprice:req.body.pprice,
+                    pdiscount:req.body.pdiscount,
                     pqty:req.body.pqty,
                     pcategory:req.body.pcategory,
                     psize:req.body.psize,

@@ -1,21 +1,20 @@
 import React from 'react';
 
 //import AdminApp from './component/Admin/AdminApp';
-import UserApp from './component/User/UserAccount/UserApp';
 //import LoginAdmin from './component/Admin/LoginAdmin';
-//import StockApp from './component/StockManager/StockApp';
+import StockApp from './component/StockManager/StockApp';
 //import ShoppingCart from './component/ShoppingCart/CartMain'
 //import WishList from './component/WishList/WishListMain'
 //import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 //import MainComponent from './component/ShoppingCart/CartMain';
 //import Payment from "./component/Payment/paymentMain";
-//import UserApp from './component/UserApp'
+import UserApp from './component/UserApp'
 
 
 function App() {
   return (
      <div>
-      <UserApp />
+      <StockApp />
     </div>
 
   );

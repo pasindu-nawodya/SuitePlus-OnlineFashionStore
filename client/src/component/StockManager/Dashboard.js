@@ -17,8 +17,6 @@ export default class Dashboard extends Component {
                 <div className="container">
                     <Cards body={value} />
                 </div>
-                <Footer />
-
             </div>
         )
     }

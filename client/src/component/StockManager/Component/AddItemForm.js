@@ -14,8 +14,24 @@ export default class AddItemForm extends Component {
         pgender:'',
         pdesc:'',
         pimage:'',
+        pdiscount:0,
+        items:[],
+        isLoaded:false,
 
       }
+
+      componentDidMount(){
+
+        fetch('http://localhost:4000/category')
+            .then(res=>res.json())
+            .then(json=>{
+                this.setState({
+                    isLoaded:true,
+                    items:json,
+                    count:0,
+                })
+            });
+    }
     
       handleChange = event => {
         this.setState({ 
@@ -37,6 +53,8 @@ export default class AddItemForm extends Component {
       }
 
     render() {
+
+        var {items} = this.state;
 
         return (
             <div>
@@ -74,6 +92,13 @@ export default class AddItemForm extends Component {
 
                                 <div className="input-group mb-4">
                                     <div className="input-group-prepend">
+                                        <span className="input-group-text" id="inputGroup-sizing-default">Product Discount</span>
+                                    </div>
+                                    <input type="number" name="pdiscount" onChange={this.handleChange} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" required/>                                 
+                                </div>
+
+                                <div className="input-group mb-4">
+                                    <div className="input-group-prepend">
                                         <span className="input-group-text" id="inputGroup-sizing-default">Quantity</span>
                                     </div>
                                     <input type="number" name="pqty" onChange={this.handleChange} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" required/>                                 
@@ -85,7 +110,9 @@ export default class AddItemForm extends Component {
                                     </div>
                                     <select name="pcategory" className="custom-select" onChange={this.handleChange} id="inputGroupSelect01" required>
                                         <option selected value="null">Choose Category</option>
-                                        <option value="tshirt">t-shirt</option>
+                                        {items.map(item=>(
+                                            <option key={item._id} value={item.cname}>{item.cdesc}</option>
+                                        ))}
                                     </select>
                                 </div>
 

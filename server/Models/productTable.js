@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const ProductSchema = mongoose.Schema({
     pname:{type:String,required:true},
     pprice:{type:Number,required:true},
+    pdiscount:{type:Number,required:true},
     pqty:{type:Number,required:true},
     pcategory:{type:String,required:true},
     psize:{type:String,required:true},
