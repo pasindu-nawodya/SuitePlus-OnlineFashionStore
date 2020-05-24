@@ -8,21 +8,8 @@ import DiscountProduct from './User/ProductPage/DiscoutProduct';
 import ProductDetails from './User/ProductPage/ProductDetails';
 import UserLogin from './User/UserAccount/UserLogin';
 import UserRegister from './User/UserAccount/UserRegister';
-import Footer from './views/Footer/Footer'
+import Footer from './views/Footer/Footer';
 
-
-/*
-                 <Router>                       
-                    <NavBar />
-                    <Switch>
-                        <Route path="/" exact component={Dashboard}/>
-                        <Route path="/additem" component={AddItem}/>
-                        <Route path="/productList" component={ProductListTable}/>
-                    </Switch>
-                 </Router>
-
-
-*/
 
 export default class Appfunction extends Component {
     render(){

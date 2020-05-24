@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import CategoryList from './CategoryList';
 
 export default class AddCategorieForm extends Component {
 
@@ -35,10 +34,6 @@ export default class AddCategorieForm extends Component {
             <div>
             <div className="container">
             <div className="row">
-
-            <div className="col-md-4 order-md-2 mb-4">
-            <CategoryList />
-            </div>
 
             <div className="col-md-8 order-md-1">
             <h4 className="mb-3"><b>Enter Category Details</b></h4>

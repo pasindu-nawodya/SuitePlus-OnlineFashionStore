@@ -5,8 +5,8 @@ export default class StockManagerList extends Component {
         return (
             <div>
             <h4 className="d-flex justify-content-between align-items-center mb-3">
-            <span className="text-muted">Request List</span>
-        <span className="badge badge-secondary badge-pill">Count</span>
+				<span className="text-muted">Request List</span>
+				<span className="badge badge-secondary badge-pill">Count</span>
             </h4>
             <ul className="list-group mb-3">
             <li className="list-group-item d-flex justify-content-between lh-condensed">

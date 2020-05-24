@@ -219,9 +219,10 @@ export default class ProductTable extends Component {
                                         <div className="input-group mb-4">
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text" id="inputGroup-sizing-default">Image</span>
-                                            </div>
-                                            <input type="textarea" value={this.state.newItem.pimage} name="pdesc"  className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>                                 
-                                        </div>
+                                            </div>  
+                                            <input type="textarea" className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>                                                            
+                                        </div>                                        
+                                        <img src={this.state.newItem.pimage} style={{width:"50%"}}/>    
                                     </form>
                                 </div>
                             </div>
@@ -258,7 +259,7 @@ export default class ProductTable extends Component {
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text" id="inputGroup-sizing-default">Product Code</span>
                                             </div>
-                                            <input type="text" placeholder="pid" value={this.state.newItem._id} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>
+                                            <input type="text" placeholder="pid" value={this.state.newItem._id} onChange={this.handleChange} className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>
                                         </div>
         
                                         <div className="input-group mb-4">
@@ -347,9 +348,10 @@ export default class ProductTable extends Component {
                                         <div className="input-group mb-4">
                                             <div className="input-group-prepend">
                                                 <span className="input-group-text" id="inputGroup-sizing-default">Image</span>
-                                            </div>
-                                            <input type="textarea" placeholder={this.state.newItem.pimage} name="pdesc"  className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" />                                 
-                                        </div>
+                                            </div>  
+                                            <input type="textarea" className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>                                                            
+                                        </div>                                        
+                                        <img src={this.state.newItem.pimage} style={{width:"50%"}}/> 
                                    
                                 </div>
                             </div>

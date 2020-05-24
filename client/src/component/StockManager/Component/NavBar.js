@@ -57,14 +57,11 @@ export default class NavBar extends Component {
                             <li className="nav-item dropdown active" >                                
                                 <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <FontAwesomeIcon classNameName="faicons" icon={faUser} /><span>&nbsp;&nbsp;</span>
-                                    <b>Pasindu Nawodya</b>
+                                    <b>Stock Manager</b>
                                 </a>
 
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <div className="dropdown-item">Stock Manager</div>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Profile</a>
-                                    <a className="dropdown-item" href="#">Account Setting</a>
+                                    <Link to="account"><a className="dropdown-item" href="#">Profile</a></Link>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#">
                                     <button className="btn btn-success my-2 my-sm-0" type="submit"> 
