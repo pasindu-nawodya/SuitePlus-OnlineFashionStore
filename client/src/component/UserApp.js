@@ -8,12 +8,25 @@ import DiscountProduct from './User/ProductPage/DiscoutProduct';
 import ProductDetails from './User/ProductPage/ProductDetails';
 import UserLogin from './User/UserAccount/UserLogin';
 import UserRegister from './User/UserAccount/UserRegister';
-import Footer from './views/Footer/Footer';
+import Footer from './views/Footer/Footer'
 import CartMain from './ShoppingCart/CartMain';
 import WishListMain from './WishList/WishListMain';
 import Payment from "./Payment/payment-form.component";
 import PaymentHistory from "./Payment/payment-list.component";
 import PaymentEdit from "./Payment/payment-edit.component";
+
+/*
+                 <Router>                       
+                    <NavBar />
+                    <Switch>
+                        <Route path="/" exact component={Dashboard}/>
+                        <Route path="/additem" component={AddItem}/>
+                        <Route path="/productList" component={ProductListTable}/>
+                    </Switch>
+                 </Router>
+
+
+*/
 
 export default class Appfunction extends Component {
     render(){
@@ -28,12 +41,14 @@ export default class Appfunction extends Component {
                     <Route path="/discount" component={DiscountProduct}/>
                     <Route path="/userLogin" component={UserLogin}/>
                     <Route path="/userRegister" component={UserRegister}/>
-                    <Route path="/wishlist" component={ WishListMain}/>
-                    <Route path="/mycart" component={ CartMain}/>
+
+                    <Route path="/wishlist/:id" component={ WishListMain}/>
+                    <Route path="/mycart/:id" component={ CartMain}/>
                     <Route path="/payment" component={ Payment}/>
                     <Route path="/paymenthistory" component={ PaymentHistory}/>
                     <Route path="/payment/edit/:id" component={ PaymentEdit}/>
                     <Route path="/product/:id" component={ProductDetails}/>                    
+
                 </Switch>
             </Router>
             <Footer/>

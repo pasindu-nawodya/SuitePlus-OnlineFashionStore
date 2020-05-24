@@ -16,14 +16,16 @@ class WishList extends React.Component {
         this.state = {
             wishlist: [],
             isEmpty:true,
-            loading:true
+            loading:true,
+            userId:props.userId,
+            cart:[]
 
         }
     }
 
     callAPI = async () => {
 
-        await fetch('http://localhost:4000/wishlist/107')
+        await fetch('http://localhost:4000/wishlist/'+this.state.userId)
             .then(res => res.json())
             .then(json => this.setState({
                 wishlist: json,
@@ -42,13 +44,21 @@ class WishList extends React.Component {
 
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.callAPI();
+       this.updateCart();
+    }
 
+    //----update state of cart--------
+    updateCart = async () =>{
+        await fetch('http://localhost:4000/cart/'+this.state.userId)
+            .then(res => res.json())
+            .then(json => this.setState({
+                cart:json
+            }));
 
 
     }
-
 
     //----delete an item--------
 
@@ -81,7 +91,19 @@ class WishList extends React.Component {
 
     //----add item to the cart----
 
-    addItemsToCart =  (id)=>{
+    addItemsToCart =  (id,pid)=>{
+
+        // Check if selected item already present in the list
+        let index=0;
+        let pr;
+        this.state.cart.map((item) =>{
+            if(item.productId == pid){
+
+                index=1;
+            }
+
+        });
+        console.log(pid);
         let list = this.state.wishlist;
         let itemToBeAdd = list.find((item)=>item._id == id);
         let remainingItem = list.filter((item) => item._id !== id);
@@ -99,34 +121,51 @@ class WishList extends React.Component {
             });
 
         }
+        console.log(index);
+        if(index == 0) {
+            //-------delete item from wishlist---
 
-        //-------delete item from wishlist---
-        console.log("came");
-        const requestOptions = {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' },
+            const requestOptions = {
+                method: 'DELETE',
+                headers: {'Content-Type': 'application/json'},
 
-        };
+            };
 
 
-        fetch('http://localhost:4000/wishlist/'+id,requestOptions);
-        //----add item to cart---------
-        const addOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(itemToBeAdd)
-        };
-        fetch('http://localhost:4000/cart/',addOptions);
+            fetch('http://localhost:4000/wishlist/' + id, requestOptions).then(alert("Item has added to shopping cart succesfully"));
+            //----add item to cart---------
+            const addOptions = {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(itemToBeAdd)
+            };
+            fetch('http://localhost:4000/cart/', addOptions);
 
-        alert("Item has added to shopping cart succesfully");
+        }else if(index == 1){
+
+            const requestOptions = {
+                method: 'DELETE',
+                headers: {'Content-Type': 'application/json'},
+
+            };
+
+
+           fetch('http://localhost:4000/wishlist/' + id, requestOptions).then(alert("Item has added to shopping cart succesfully"));
+        }
 
 
 
     }
 
+    //-----redirect to home------
 
+    gotoHome = () =>{
+        console.log("home");
+        this.props.history.push('/');
+    }
 
     render() {
+console.log(this.state.wishlist);
         if(this.state.loading == true){
             return(
                 <center>
@@ -148,7 +187,7 @@ class WishList extends React.Component {
                         <br/>
                         <span> <img src={require('../images/sad.png')} className="sadimage"/>
                   <p className="empty">&nbsp;You don't have any items in your wish List. Let's get shopping!&nbsp;</p></span>
-                        <Button variant="info" style = {{color:"white"}} onClick = {this.newfunction}>Start Shopping</Button>
+                <Button variant="info"style={{color: "white"}} onClick = {()=> this.gotoHome()}>Start Shopping</Button>
 
 
                     </div>
@@ -169,13 +208,14 @@ class WishList extends React.Component {
 
 
                     {this.state.wishlist.map((item) =>
+
+
                         (
 
                             <MDBContainer key={item.key}>
                                 <MDBRow key={item.key}>
 
-                                    <MDBCol className="columnSet" key={item.key}><img src={require('../images/whiteFrock.jpg')}
-                                                                       className="productimage"/> </MDBCol>
+                                    <MDBCol className="columnSet" key={item.key}><img src = {item.image} className = "productimage"/> </MDBCol>
                                     <MDBCol className="columnSet" key={item.key}>
                                         <span><p className="productName" key={item.key}>{item.productName}</p></span>
                                         <span><p className="productColour" key={item.key}>{item.colour}</p></span>
@@ -183,12 +223,10 @@ class WishList extends React.Component {
 
                                     </MDBCol>
 
-                                    <MDBCol className="columnSet" key={item.key}><span className="quantityString">Quantity</span>
-                                        <spa><p className="productQty">{item.quantity}</p></spa>
-                                    </MDBCol>
+
                                     <MDBCol className="columnSet"><span><p
                                         className="productPrice">Rs {item.price}/=</p></span><br/>
-                                        <MDBBtn color="primary" onClick={() => this.addItemsToCart(item._id)}>Add To
+                                        <MDBBtn color="primary" onClick={() => this.addItemsToCart(item._id,item.productId)}>Add To
                                             Cart</MDBBtn>
                                         <br/><br/>
                                         <div className="remove">
@@ -212,4 +250,4 @@ class WishList extends React.Component {
         }
     }
 }
-export default WishList;
+export default withRouter(WishList);
