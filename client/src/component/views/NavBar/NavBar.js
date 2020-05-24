@@ -85,9 +85,10 @@ export default class NavBar extends Component {
                                 </a>
 
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">My Cart</a>
+                                    <div className="dropdown-item">My Cart</div>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Payment Setting</a>
+                                    <Link to="payment"><div className="dropdown-item">Payment Setting</div></Link>
+                                    <Link to="paymenthistory"><div className="dropdown-item">Payment History</div></Link>
                                     <a className="dropdown-item" href="#">Account Setting</a>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#">

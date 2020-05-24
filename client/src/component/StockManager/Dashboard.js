@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Slider from './Component/Slider';
 import Cards from './Component/Cards';
-import Footer from './Component/Footer';
 
 export default class Dashboard extends Component {
    

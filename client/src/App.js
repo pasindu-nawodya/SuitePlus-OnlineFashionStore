@@ -14,7 +14,7 @@ import UserApp from './component/UserApp';
 function App() {
   return (
      <div>
-      <StockApp />
+      <UserApp />
     </div>
 
   );

@@ -10,7 +10,10 @@ import UserLogin from './User/UserAccount/UserLogin';
 import UserRegister from './User/UserAccount/UserRegister';
 import Footer from './views/Footer/Footer';
 import CartMain from './ShoppingCart/CartMain';
-import  WishListMain from './WishList/WishListMain';
+import WishListMain from './WishList/WishListMain';
+import Payment from "./Payment/payment-form.component";
+import PaymentHistory from "./Payment/payment-list.component";
+import PaymentEdit from "./Payment/payment-edit.component";
 
 export default class Appfunction extends Component {
     render(){
@@ -27,6 +30,9 @@ export default class Appfunction extends Component {
                     <Route path="/userRegister" component={UserRegister}/>
                     <Route path="/wishlist" component={ WishListMain}/>
                     <Route path="/mycart" component={ CartMain}/>
+                    <Route path="/payment" component={ Payment}/>
+                    <Route path="/paymenthistory" component={ PaymentHistory}/>
+                    <Route path="/payment/edit/:id" component={ PaymentEdit}/>
                 </Switch>
             </Router>
             <Footer/>
