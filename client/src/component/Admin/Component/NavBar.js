@@ -9,7 +9,7 @@ export default class NavBar extends Component {
 
             <nav class="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#008272"}}>
 
-    <Link to="/"><div className="navbar-brand text-white"><b>SuitePlus</b></div></Link>
+    <Link to="/admin"><div className="navbar-brand text-white"><b>SuitePlus</b></div></Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,7 +25,7 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                         <li class="nav-item active">
-            <Link to="/"><div className="nav-link text-white"><b>Dashboard </b><span className="sr-only">(current)</span></div></Link>
+            <Link to="/admin"><div className="nav-link text-white"><b>Dashboard </b><span className="sr-only">(current)</span></div></Link>
                         </li>
 
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
