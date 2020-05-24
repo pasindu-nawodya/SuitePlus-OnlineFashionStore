@@ -10,7 +10,7 @@ import PaymentBox from "./Components/payment";
 //import {height} from "@fortawesome/free-solid-svg-icons/faAd";
 
 
-class MainComponent extends Component{
+class CartMain extends Component{
 
     constructor(props){
         super(props);
@@ -71,7 +71,7 @@ class MainComponent extends Component{
                     <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
                 
 
-
+           <br/><br/><br/>
             </div>
 
 
@@ -81,4 +81,4 @@ class MainComponent extends Component{
 
 
 }
-export default MainComponent;
+export default CartMain;

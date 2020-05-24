@@ -4,7 +4,10 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import { MDBBtn } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import {withRouter} from 'react-router-dom';
+
 
 
 class PaymentBox extends React.Component{
@@ -32,10 +35,14 @@ class PaymentBox extends React.Component{
         });
     }
 
+    
 
 
     //-----render function-------
     render() {
+
+        
+        
         if (this.state.numOfItems == 0) {
 
             return (<div>
@@ -44,40 +51,50 @@ class PaymentBox extends React.Component{
         } else {
             return (
 
-                <div className="test">
+                
+                
+                    <Container className="test">
 
-                    <MDBContainer className = "t">
-                        <h4>Order Summary</h4>
-                        <MDBRow>
-
-
-                            <MDBCol  className="col-md-8">
-
-                                <MDBRow>
-                                    <div className="left">Number of Items</div>
-                                    <div className="right">{this.state.numOfItems}</div>
-                                </MDBRow>
-                                <MDBRow>
-                                    <div className="left">Total Price</div>
-                                    <div className="right">Rs {this.state.price}/=</div>
-                                </MDBRow>
+                        <MDBContainer className = "t">
+                            <h4>Order Summary</h4>
+                            <MDBRow>
 
 
-                            </MDBCol>
+                                <MDBCol  className="columnEight">
 
-                            <MDBCol className = "checkoutBox">
-                              <MDBBtn color="dark-green">Check Out</MDBBtn>
-                           </MDBCol>
+                                    <MDBRow>
+                                        <div className="left">Number of Items</div>
+                                        <div className="right">{this.state.numOfItems}</div>
+                                    </MDBRow>
+                                    <MDBRow>
+                                        <div className="left">Total Price</div>
+                                        <div className="right">Rs {this.state.price}/=</div>
+                                    </MDBRow>
 
-                        </MDBRow>
-                    </MDBContainer>
+
+                                </MDBCol>
+
+                                <MDBCol className = "checkoutBox">
+
+                                        <Button  variant="success" className = "checkBtn" onClick = {() => this.props.history.push('/payment/add')}>
+                                            
+                                            Check Out
+                                            
+                                        </Button>
+                                    
+                                </MDBCol>
+
+                            </MDBRow>
+                        </MDBContainer>
 
 
-                </div>
+                    </Container>
+
+                    
 
             );
         }
     }
 
 }
-export default PaymentBox;
+export default withRouter(PaymentBox);
