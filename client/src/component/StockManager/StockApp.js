@@ -23,6 +23,9 @@ export default class Appfunction extends Component {
                     <Route path="/account" component={Account}/>
                 </Switch>
             </Router>
+            <br />
+            <br />
+            <br />
             <Footer />
             </div>
         );
