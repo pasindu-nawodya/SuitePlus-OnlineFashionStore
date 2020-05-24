@@ -12,8 +12,7 @@ export default class Slider extends Component {
               <main role="main">
                 <section className="jumbotron text-center">
                   <div className="container">
-                    <h1 style={{fontSize:"60px"}}><b>Stock Manager Dashboard</b></h1>
-                    <h4>Welcome Pasindu </h4><br />              
+                    <h1 style={{fontSize:"60px"}}><b>Stock Manager Dashboard</b></h1>           
                     <p className="lead text-muted"><b>Current Date: {date} </b></p>                
                     <p>
                       <a href="#" className="btn btn-primary my-2">Production List</a>

@@ -27,7 +27,6 @@ router.get('/:userId',async(req,res)=>{
                 "userId" :req.body.userId,
                 "productId":req.body.productId,
                 "productName":req.body.productName,
-                "quantity":req.body.quantity,
                 "size":req.body.size,
                 "colour":req.body.colour,
                 "image":req.body.image,
