@@ -7,21 +7,23 @@ import {Link} from "react-router-dom"
 
 let Payment = props => (
 
-    <tr>
-        <td>{props.payment.fname}</td>
-        <td>{props.payment.lname}</td>
-        <td>{props.payment.fline}</td>
-        <td>{props.payment.Lline}</td>
-        <td>{props.payment.contact}</td>
-        <td>{props.payment.cardnumber}</td>
-        <td>{props.payment.cvv}</td>
-        <td>{props.payment.expdate.substring(0,10)}</td>
-        <td>{props.payment.createdAt.substring(0,10)}</td>
-        <td>
-            <button type="button" className="btn btn-outline-danger" onClick={()=> {props.deletePayment(props.payment._id)}}>Remove</button> 
-            <button type="button" className="btn btn-outline-warning ml-2"><Link to={'/payment/edit/'+props.payment._id}>Change</Link></button>
-        </td>    
-    </tr>
+    
+        <tr>
+            <td>{props.payment.fname}</td>
+            <td>{props.payment.lname}</td>
+            <td>{props.payment.fline}</td>
+            <td>{props.payment.Lline}</td>
+            <td>{props.payment.contact}</td>
+            <td>{props.payment.cardnumber}</td>
+            <td>{props.payment.cvv}</td>
+            <td>{props.payment.expdate.substring(0,10)}</td>
+            <td>{props.payment.createdAt.substring(0,10)}</td>
+            <td>
+                <button type="button" className="btn btn-outline-danger" onClick={()=> {props.deletePayment(props.payment._id)}}>Remove</button> 
+                <button type="button" className="btn btn-outline-warning ml-2"><Link to={'/payment/edit/'+props.payment._id}>Change</Link></button>
+            </td>    
+        </tr>
+    
 
 )
 

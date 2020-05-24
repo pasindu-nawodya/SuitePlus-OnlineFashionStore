@@ -8,12 +8,18 @@ import DiscountProduct from './User/ProductPage/DiscoutProduct';
 import ProductDetails from './User/ProductPage/ProductDetails';
 import UserLogin from './User/UserAccount/UserLogin';
 import UserRegister from './User/UserAccount/UserRegister';
-import Footer from './views/Footer/Footer'
+import Footer from './views/Footer/Footer';
+import WishListMain from './WishList/WishListMain';
 import CartMain from './ShoppingCart/CartMain';
+
+import PaymentForm from './Payment/payment-form.component';
+import ListPayment from './Payment/payment-list.component';
+import EditPayment from './Payment/payment-edit.component';
 import WishListMain from './WishList/WishListMain';
 import Payment from "./Payment/payment-form.component";
 import PaymentHistory from "./Payment/payment-list.component";
 import PaymentEdit from "./Payment/payment-edit.component";
+
 
 /*
                  <Router>                       
@@ -41,13 +47,13 @@ export default class Appfunction extends Component {
                     <Route path="/discount" component={DiscountProduct}/>
                     <Route path="/userLogin" component={UserLogin}/>
                     <Route path="/userRegister" component={UserRegister}/>
-
+                    <Route path="/payment/add" exact component={PaymentForm}/>
+                    <Route path="/payment/history" exact component={ListPayment}/>
+                    <Route path="/payment/edit/:id" exact component={EditPayment}/>
                     <Route path="/wishlist/:id" component={ WishListMain}/>
                     <Route path="/mycart/:id" component={ CartMain}/>
-                    <Route path="/payment" component={ Payment}/>
-                    <Route path="/paymenthistory" component={ PaymentHistory}/>
-                    <Route path="/payment/edit/:id" component={ PaymentEdit}/>
                     <Route path="/product/:id" component={ProductDetails}/>                    
+
 
                 </Switch>
             </Router>

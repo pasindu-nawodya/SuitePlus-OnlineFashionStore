@@ -85,7 +85,7 @@ class PaymentForm extends Component{
         console.log('payment successful');
         console.log(payment);
         axios.post('http://localhost:4000/payment/add', payment).then(res => console.log(res.data));
-        window.location = '/payment/history';
+        window.location = ('/payment/hisroty');
 
     }
 
@@ -156,7 +156,7 @@ class PaymentForm extends Component{
                     </div>
                     <br/>
                     <div className="form-group">
-                        <input type="submit" value="Purchase" className="btn btn-success"/>
+                        <input type="submit" value="Purchase" className="btn btn-success btn-lg"/>
                     </div>
 
 
