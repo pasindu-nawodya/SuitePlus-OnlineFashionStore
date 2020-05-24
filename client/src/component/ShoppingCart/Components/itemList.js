@@ -58,7 +58,7 @@ class CartItems extends React.Component{
         this.props.tprice(this.state.totalPrice);
         //this.props.carts(this.state.myCart);
 
-
+        console.log(this.state.myCart);
     }
 
     componentWillReceiveProps(props) {

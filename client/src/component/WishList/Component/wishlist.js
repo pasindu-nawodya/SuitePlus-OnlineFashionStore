@@ -17,7 +17,8 @@ class WishList extends React.Component {
             wishlist: [],
             isEmpty:true,
             loading:true,
-            userId:props.userId
+            userId:props.userId,
+            cart:[]
 
         }
     }
@@ -45,11 +46,19 @@ class WishList extends React.Component {
 
     componentDidMount() {
         this.callAPI();
+       this.updateCart();
+    }
 
+    //----update state of cart--------
+    updateCart = async () =>{
+        await fetch('http://localhost:4000/cart/'+this.state.userId)
+            .then(res => res.json())
+            .then(json => this.setState({
+                cart:json
+            }));
 
 
     }
-
 
     //----delete an item--------
 
@@ -82,7 +91,19 @@ class WishList extends React.Component {
 
     //----add item to the cart----
 
-    addItemsToCart =  (id)=>{
+    addItemsToCart =  (id,pid)=>{
+
+        // Check if selected item already present in the list
+        let index=0;
+        let pr;
+        this.state.cart.map((item) =>{
+            if(item.productId == pid){
+
+                index=1;
+            }
+
+        });
+        console.log(pid);
         let list = this.state.wishlist;
         let itemToBeAdd = list.find((item)=>item._id == id);
         let remainingItem = list.filter((item) => item._id !== id);
@@ -100,26 +121,37 @@ class WishList extends React.Component {
             });
 
         }
+        console.log(index);
+        if(index == 0) {
+            //-------delete item from wishlist---
 
-        //-------delete item from wishlist---
-        console.log("came");
-        const requestOptions = {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' },
+            const requestOptions = {
+                method: 'DELETE',
+                headers: {'Content-Type': 'application/json'},
 
-        };
-
-
-        fetch('http://localhost:4000/wishlist/'+id,requestOptions);
-        //----add item to cart---------
-        const addOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(itemToBeAdd)
-        };
-        fetch('http://localhost:4000/cart/',addOptions).then( alert("Item has added to shopping cart succesfully"));
+            };
 
 
+            fetch('http://localhost:4000/wishlist/' + id, requestOptions).then(alert("Item has added to shopping cart succesfully"));
+            //----add item to cart---------
+            const addOptions = {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(itemToBeAdd)
+            };
+            fetch('http://localhost:4000/cart/', addOptions);
+
+        }else if(index == 1){
+
+            const requestOptions = {
+                method: 'DELETE',
+                headers: {'Content-Type': 'application/json'},
+
+            };
+
+
+           fetch('http://localhost:4000/wishlist/' + id, requestOptions).then(alert("Item has added to shopping cart succesfully"));
+        }
 
 
 
@@ -194,7 +226,7 @@ console.log(this.state.wishlist);
 
                                     <MDBCol className="columnSet"><span><p
                                         className="productPrice">Rs {item.price}/=</p></span><br/>
-                                        <MDBBtn color="primary" onClick={() => this.addItemsToCart(item._id)}>Add To
+                                        <MDBBtn color="primary" onClick={() => this.addItemsToCart(item._id,item.productId)}>Add To
                                             Cart</MDBBtn>
                                         <br/><br/>
                                         <div className="remove">

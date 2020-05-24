@@ -10,7 +10,8 @@ export default class HomepageProducts extends Component {
             items:[],
             isLoaded:false,
             count:0,
-            userId:"5ec76f0b133ca45fccadc01a"
+            userId:"5ec76f0b133ca45fccadc01a",
+            wishlist:[]
         }
     }
 
@@ -25,34 +26,64 @@ export default class HomepageProducts extends Component {
 
             console.log(json)
         });
+
+        this.updateWishlistState();
     }
 
+    //-----update state of wishlist------
+    updateWishlistState = () =>{
+        fetch('http://localhost:4000/wishlist/'+this.state.userId)
+            .then(res=>res.json())
+            .then(json=>{
+                this.setState({
+                    wishlist:json
+                })
+
+                console.log(json)
+            });
+
+    }
     //-----add items to wishlist------
 
     addtoWishlist= async (image,product,price,size,pid)=>{
 
-       let newWishListItem = {
+        // Check if selected item already present in the list
+        let index=0;
+        this.state.wishlist.map((item) =>{
+            if(item.productId == pid){
 
-           userId :this.state.userId,
-           productId:pid,
-           productName:product,
-           size:size,
-           colour:"Blue",
-           image:image,
-           price:price
-       }
+                index=1;
+            }
 
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newWishListItem)
-        };
+        });
 
-         await  fetch('http://localhost:4000/wishlist', requestOptions)
-            .then(window.alert("Item has added to wishlist"))
-            .catch(error => {
-                console.error('Error:', error);
-            });;
+        //If selected item does not contain in the list only, it will be added to the list
+        if(index == 0) {
+            let newWishListItem = {
+
+                userId: this.state.userId,
+                productId: pid,
+                productName: product,
+                size: size,
+                colour: "Blue",
+                image: image,
+                price: price
+            }
+
+            const requestOptions = {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(newWishListItem)
+            };
+
+            await fetch('http://localhost:4000/wishlist', requestOptions)
+                .then(window.alert("Item has added to the wishlist"))
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            ;
+
+        }
     }
     render() {   
         
