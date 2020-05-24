@@ -13,8 +13,8 @@ export default class NavBar extends Component {
         }
     }
 
+    //fetch category 
     componentDidMount(){
-
         fetch('http://localhost:4000/category')
             .then(res=>res.json())
             .then(json=>{
@@ -60,7 +60,7 @@ export default class NavBar extends Component {
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <Link to="/product" ><div className="dropdown-item">All Product</div></Link>
                                     {items.map(item=>(
-                                    <Link to="/filterProduct"><div className="dropdown-item" key={item._id}>{item.cdesc}</div></Link>
+                                        <Link to={"/filterProduct/"+item.cdesc}><div className="dropdown-item" key={item._id}>{item.cdesc}</div></Link>
                                     ))}
                                     <div className="dropdown-divider"></div>
                                     <Link to="/discount"><div className="dropdown-item">Discount Products</div></Link>                         
@@ -71,7 +71,7 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     
                     <li className="nav-item active">
-                    <Link to="/filterProduct"><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
+                        <Link to="/wishlist"><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
                     </li>
                         
                     </ul>
@@ -85,11 +85,10 @@ export default class NavBar extends Component {
                                 </a>
 
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <div className="dropdown-item">My Cart</div>
+                                    <Link to="/mycart"><div className="dropdown-item">My Cart</div></Link>
                                     <div className="dropdown-divider"></div>
-                                    <Link to="payment"><div className="dropdown-item">Payment Setting</div></Link>
-                                    <Link to="paymenthistory"><div className="dropdown-item">Payment History</div></Link>
-                                    <a className="dropdown-item" href="#">Account Setting</a>
+                                    <Link to="/payment"><div className="dropdown-item">Payment Setting</div></Link>
+                                    <Link to="/useraccount"><a className="dropdown-item" href="#">Account Setting</a></Link>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#">
                                     <Link to="/userLogin">

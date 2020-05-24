@@ -14,6 +14,7 @@ import WishListMain from './WishList/WishListMain';
 import Payment from "./Payment/payment-form.component";
 import PaymentHistory from "./Payment/payment-list.component";
 import PaymentEdit from "./Payment/payment-edit.component";
+import UserAccount from './User/UserAccount/UserAccount';
 
 export default class Appfunction extends Component {
     render(){
@@ -24,9 +25,10 @@ export default class Appfunction extends Component {
                 <Switch>
                     <Route path="/" exact component={Home}/>
                     <Route path="/product" exact component={AllProduct}/>
-                    <Route path="/filterProduct" component={FilterProduct}/>
+                    <Route path="/filterProduct/:id" component={FilterProduct}/>
                     <Route path="/discount" component={DiscountProduct}/>
-                    <Route path="/userLogin" component={UserLogin}/>
+                    <Route path="/userLogin" component={UserLogin}/>                    
+                    <Route path="/useraccount" component={UserAccount}/>
                     <Route path="/userRegister" component={UserRegister}/>
                     <Route path="/wishlist" component={ WishListMain}/>
                     <Route path="/mycart" component={ CartMain}/>

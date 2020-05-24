@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import image from './img/shirt.jpg';
 import Selected from './SelectedProduct';
 import { faCartPlus,faHeart } from '@fortawesome/free-solid-svg-icons';

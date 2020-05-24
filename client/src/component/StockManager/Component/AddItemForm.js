@@ -133,7 +133,7 @@ export default class AddItemForm extends Component {
                                     <select name="pcategory" className="custom-select" onChange={this.handleChange} id="inputGroupSelect01" required>
                                         <option selected value="null">Choose Category</option>
                                         {items.map(item=>(
-                                            <option key={item._id} value={item.cname}>{item.cdesc}</option>
+                                            <option key={item._id} value={item.cdesc}>{item.cdesc}</option>
                                         ))}
                                     </select>
                                 </div>

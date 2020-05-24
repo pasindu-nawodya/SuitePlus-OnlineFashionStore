@@ -10,6 +10,7 @@ export default class AllItem extends Component {
         }
     }
 
+    //fetch product details
     componentDidMount(){
         fetch('http://localhost:4000/product')
         .then(res=>res.json())
