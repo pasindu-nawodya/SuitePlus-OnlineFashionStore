@@ -9,7 +9,8 @@ import ProductDetails from './User/ProductPage/ProductDetails';
 import UserLogin from './User/UserAccount/UserLogin';
 import UserRegister from './User/UserAccount/UserRegister';
 import Footer from './views/Footer/Footer';
-
+import CartMain from './ShoppingCart/CartMain';
+import  WishListMain from './WishList/WishListMain';
 
 export default class Appfunction extends Component {
     render(){
@@ -24,9 +25,12 @@ export default class Appfunction extends Component {
                     <Route path="/discount" component={DiscountProduct}/>
                     <Route path="/userLogin" component={UserLogin}/>
                     <Route path="/userRegister" component={UserRegister}/>
+                    <Route path="/wishlist" component={ WishListMain}/>
+                    <Route path="/mycart" component={ CartMain}/>
                 </Switch>
             </Router>
             <Footer/>
+
             </div>
         );
     }

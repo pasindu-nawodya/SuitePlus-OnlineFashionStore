@@ -1,16 +1,15 @@
 import React from 'react';
 import './CSS/CartMain.css';
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css'
 import CartItems from "./Components/itemList";
 import PaymentBox from "./Components/payment";
 import {withRouter} from'react-router-dom';
 import {height} from "@fortawesome/free-solid-svg-icons/faAd";
 
 
-class MainComponent extends React.Component{
+class CartMain extends React.Component{
     constructor(props){
         super(props);
         this.state ={
@@ -66,7 +65,7 @@ class MainComponent extends React.Component{
                     <div className="title">
                         <center>
 
-                            <h1>
+                            <h1 className = "head1">
 
 
                                 <span>&nbsp;&nbsp;&nbsp;<img src={require('./images/favouritecart.png')}/></span>
@@ -81,10 +80,10 @@ class MainComponent extends React.Component{
                     <CartItems  numItems = {this.getNumOfItems} tprice = {this.getTotalPrice}  ></CartItems>
 
 
-            <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
+                   <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
                 </Container>
 
-
+           <br/><br/><br/>
             </div>
 
 
@@ -93,4 +92,4 @@ class MainComponent extends React.Component{
 
 
 }
-export default MainComponent;
+export default CartMain;

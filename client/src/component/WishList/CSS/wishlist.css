@@ -1,13 +1,5 @@
-.col-md-4 {
-    padding: 1rem;
-    background-color: #e6f2f0;
-    border: 1px solid #fff;
-    color: #fff;
-    text-align: center;
-    height: 150px;
-}
 
-.col-md-3 {
+.columnSet {
     padding: 1rem;
     background-color: white;
     color: black;
@@ -21,8 +13,12 @@
     width:auto;
     height: auto;
 
-
-
+}
+.emptyCard{
+    background-color:#DCDCDC;
+    width: 480px;
+    height: auto;
+    border-color: black;
 
 }
 .productName{
@@ -98,7 +94,6 @@
     background-color: white;
     border: 0px;
     outline: none;
-
 }
 
 .trashBtn:active {
@@ -112,56 +107,6 @@
 
     outline:0;
 }
-.value-button {
-    display: inline-block;
-    border: 1px solid #ddd;
-    margin: 0px;
-    width: 40px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 11px 0;
-    background: #eee;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-form {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 50px;
-}
-
-.value-button {
-    display: inline-block;
-    border: 1px solid #ddd;
-    margin: 0px;
-    width: 40px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 11px 0;
-    background: #eee;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.value-button:hover {
-    cursor: pointer;
-}
-
-
-
 
 .qty {
     text-align: center;
@@ -173,30 +118,7 @@ form {
     height: 40px;
 }
 
-.increseDecreseBtn{
 
-
-    border-radius: 4px;
-    margin: 0px;
-    width: 30px;
-    height: 25px;
-    text-align:center;
-    vertical-align: middle;
-    padding: 0px 0;
-    background: #eee;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-}
-
-.increseDecreseBtn:hover{
-
-    cursor: pointer;
-}
 .emptyList{
 
 
@@ -204,13 +126,7 @@ form {
     text-align: right;
 
 }
-.card{
-    background-color: white;
-    width: 480px;
-    height: auto;
-    border-color: coral;
 
-}
 .sadimage{
 
     height: auto;

@@ -3,10 +3,9 @@ import { MDBBtn } from "mdbreact";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css'
 import '../CSS/itemList.css';
 import Container from 'react-bootstrap/Container'
-import Button from "react-bootstrap/esm/Button";
+import Button from "react-bootstrap/Button";
 
 
 
@@ -27,7 +26,7 @@ class CartItems extends React.Component{
     }
     callAPI = async ()=>  {
 
-        await fetch("http://localhost:4000/cart/105")
+        await fetch("http://localhost:4000/cart/101")
             .then(res => res.json())
             .then(json => this.setState({
                 myCart:json,
@@ -256,7 +255,7 @@ class CartItems extends React.Component{
                     <br/> <br/>
                     <center>
 
-                        <div className="card">
+                        <div className="cardEmpty">
                             <br/>
                             <span> <img src={require('../images/empty.png')} className="sadimage"/>
                   <p className="empty">You don't have any items in your cart. Let's get shopping!</p></span>
@@ -273,7 +272,7 @@ class CartItems extends React.Component{
 
             return (
 
-                <Container className="list">
+                <Container className="cartlist">
 
                     <br/>
 
@@ -282,23 +281,23 @@ class CartItems extends React.Component{
                         <MDBContainer key={item.key}>
                             <MDBRow key={item.key}>
 
-                                <MDBCol md="3" key={item.key}><img src={require('../images/whiteFrock.jpg')}
+                                <MDBCol className="cartCol" key={item.key}><img src={require('../images/whiteFrock.jpg')}
                                                                    className="productimage"/> </MDBCol>
-                                <MDBCol md="3" className="product" key={item.key}>
+                                <MDBCol className="cartCol" key={item.key}>
                                     <span><p className="productName" key={item.key}>{item.productName}</p></span>
                                     <span><p className="productColour" key={item.key}>{item.colour}</p></span>
                                     <span><p className="productSize" key={item.key}>{item.size}</p></span>
 
                                 </MDBCol>
 
-                                <MDBCol md="3" key={item.key}><span className="quantityString">Quantity</span><br/>
-                                    <MDBBtn className="increseDecreseBtn"
-                                            onClick={() => this.decreaseQuantity(item._id)}>-</MDBBtn>
+                                <MDBCol className="cartCol" key={item.key}><span className="quantityString">Quantity</span><br/>
+                                    <Button variant="success" className="increseDecreseBtn"
+                                            onClick={() => this.decreaseQuantity(item._id)}>-</Button>
                                     <input type="number" className="qty" value={item.quantity}/>
-                                    <MDBBtn className="increseDecreseBtn"
-                                            onClick={() => this.increaseQuantity(item._id)}>+</MDBBtn>
+                                    <Button variant="success" className="increseDecreseBtn"
+                                            onClick={() => this.increaseQuantity(item._id)}>+</Button>
                                 </MDBCol>
-                                <MDBCol md="3"><span><p
+                                <MDBCol className="cartCol"><span><p
                                     className="productPrice">Rs {item.price}/=</p></span><br/><br/><br/><br/><br/>
                                     <div className="remove">
                                         <button className="trashBtn" onClick={() => this.deleteProduct(item._id)}><img

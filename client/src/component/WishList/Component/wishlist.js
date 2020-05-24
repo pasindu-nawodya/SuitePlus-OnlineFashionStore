@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import '../CSS/wishlist.css';
-import 'mdbreact/dist/css/mdb.css'
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {MDBBtn} from "mdbreact";
@@ -23,7 +23,7 @@ class WishList extends React.Component {
 
     callAPI = async () => {
 
-        await fetch('http://localhost:4000/wishlist/106')
+        await fetch('http://localhost:4000/wishlist/107')
             .then(res => res.json())
             .then(json => this.setState({
                 wishlist: json,
@@ -144,14 +144,15 @@ class WishList extends React.Component {
 
                 <center>
 
-                    <div className="card" >
+                    <div className="emptyCard" >
                         <br/>
                         <span> <img src={require('../images/sad.png')} className="sadimage"/>
                   <p className="empty">&nbsp;You don't have any items in your wish List. Let's get shopping!&nbsp;</p></span>
-                        <MDBBtn color="cyan" style = {{color:"white"}} onClick = {this.newfunction}>Start Shopping</MDBBtn>
+                        <Button variant="info" style = {{color:"white"}} onClick = {this.newfunction}>Start Shopping</Button>
 
 
                     </div>
+
                 </center>
 
 
@@ -173,19 +174,19 @@ class WishList extends React.Component {
                             <MDBContainer key={item.key}>
                                 <MDBRow key={item.key}>
 
-                                    <MDBCol md="3" key={item.key}><img src={require('../images/whiteFrock.jpg')}
+                                    <MDBCol className="columnSet" key={item.key}><img src={require('../images/whiteFrock.jpg')}
                                                                        className="productimage"/> </MDBCol>
-                                    <MDBCol md="3" className="product" key={item.key}>
+                                    <MDBCol className="columnSet" key={item.key}>
                                         <span><p className="productName" key={item.key}>{item.productName}</p></span>
                                         <span><p className="productColour" key={item.key}>{item.colour}</p></span>
                                         <span><p className="productSize" key={item.key}>{item.size}</p></span>
 
                                     </MDBCol>
 
-                                    <MDBCol md="3" key={item.key}><span className="quantityString">Quantity</span>
+                                    <MDBCol className="columnSet" key={item.key}><span className="quantityString">Quantity</span>
                                         <spa><p className="productQty">{item.quantity}</p></spa>
                                     </MDBCol>
-                                    <MDBCol md="3"><span><p
+                                    <MDBCol className="columnSet"><span><p
                                         className="productPrice">Rs {item.price}/=</p></span><br/>
                                         <MDBBtn color="primary" onClick={() => this.addItemsToCart(item._id)}>Add To
                                             Cart</MDBBtn>
