@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import bg1 from './img/bg1.jpg';
 import bg2 from './img/bg2.jpg';
 import logo from './img/newlogo.png';
@@ -17,14 +18,14 @@ export default class HomeBanner extends Component {
                       <img src={bg1} style={{height:"500px",width:"100%",opacity:"0.3"}} alt="..." />
                       <div className="carousel-caption ">                        
                         <h3> <img src={logo} style={{height:"500px",width:"80%"}} alt="..." /></h3>
-                        <h1><button className="btn btn-success">EXPLORE THE FASHION</button></h1>
+                        <h1><Link to="/product"><button className="btn btn-success">EXPLORE THE FASHION</button></Link></h1>
                       </div>
                     </div>
                     <div className="carousel-item">
                       <img src={bg2} style={{height:"500px",width:"100%",opacity:"0.3"}} alt="..." />
                       <div className="carousel-caption ">                        
                         <h3> <img src={logo} style={{height:"500px",width:"80%"}} alt="..." /></h3>
-                        <h1><button className="btn btn-success">EXPLORE THE FASHION</button></h1>
+                        <h1><Link to="/product"><button className="btn btn-success">EXPLORE THE FASHION</button></Link></h1>
                       </div>
                     </div>
                   </div>

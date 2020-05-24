@@ -23,8 +23,8 @@ export default class Appfunction extends Component {
                 <NavBar />
                 <Switch>
                     <Route path="/" exact component={Home}/>
-                    <Route path="/product" component={AllProduct}/>
-                    <Route path="/filterProduct" component={ProductDetails}/>
+                    <Route path="/product" exact component={AllProduct}/>
+                    <Route path="/filterProduct" component={FilterProduct}/>
                     <Route path="/discount" component={DiscountProduct}/>
                     <Route path="/userLogin" component={UserLogin}/>
                     <Route path="/userRegister" component={UserRegister}/>
@@ -33,6 +33,7 @@ export default class Appfunction extends Component {
                     <Route path="/payment" component={ Payment}/>
                     <Route path="/paymenthistory" component={ PaymentHistory}/>
                     <Route path="/payment/edit/:id" component={ PaymentEdit}/>
+                    <Route path="/product/:id" component={ProductDetails}/>                    
                 </Switch>
             </Router>
             <Footer/>

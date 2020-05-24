@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 export default class DiscountCard extends Component {
     render() {
@@ -12,7 +13,7 @@ export default class DiscountCard extends Component {
                     <div className="card-body">
                         <h5 className="card-title">We offer some discount end of the season</h5>
                         <p className="card-text">To get that Benefits Click the Discount Button Below</p>
-                        <button className="btn btn-danger">Discounts</button>
+                        <Link to="/discount"><button className="btn btn-danger">Discounts</button></Link>
                     </div>
                     <div className="card-footer text-muted">
                         Get the benefits
