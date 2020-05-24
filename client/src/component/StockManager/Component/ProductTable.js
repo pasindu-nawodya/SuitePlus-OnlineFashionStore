@@ -222,6 +222,7 @@ export default class ProductTable extends Component {
                                             </div>
                                             <input type="textarea" value={this.state.newItem.pimage} name="pdesc"  className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled/>                                 
                                         </div>
+                                        <img src={this.state.newItem.pimage} style={{width:"50%"}} />
                                     </form>
                                 </div>
                             </div>

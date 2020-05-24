@@ -76,7 +76,6 @@ export default class NavBar extends Component {
                     
                     <li className="nav-item active">
 
-                        <Link to="/wishlist"><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
 
                     <Link to={`/wishlist/${this.state.userId}`}><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
 

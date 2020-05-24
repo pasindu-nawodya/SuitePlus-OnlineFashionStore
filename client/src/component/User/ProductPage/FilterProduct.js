@@ -48,7 +48,7 @@ export default class FilterProduct extends Component {
                 <main role="main">
                     <section className="jumbotron text-center">
                         <div className="container">
-                            <h1 style={{fontSize:"30px"}}><b>Discount Available Items</b></h1>                        
+                            <h1 style={{fontSize:"30px"}}><b>{this.props.match.params.id } Collection</b></h1>                        
                         </div>            
                     </section>
                 </main>
@@ -59,7 +59,7 @@ export default class FilterProduct extends Component {
                             {items.filter(filt => filt.pcategory === this.props.match.params.id ).map(item=>(                                
                                 <div className="col-md-4" key={item._id}>
                                     <div class="card mb-4 shadow-sm">
-                                        <img src={image} className="card-img-top" alt="..."></img>
+                                        <img src={item.pimage} className="card-img-top" alt="..."></img>
                                         <div className="card-body">
                                         <center>
                                         <table>

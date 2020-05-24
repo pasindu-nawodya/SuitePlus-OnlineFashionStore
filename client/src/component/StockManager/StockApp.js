@@ -15,7 +15,7 @@ export default class Appfunction extends Component {
             <Router>                       
             <NavBar />
                 <Switch>
-                    <Route path="/" exact component={Dashboard}/>
+                    <Route path="/stockman" exact component={Dashboard}/>
                     <Route path="/allitem" component={AllItem}/>
                     <Route path="/additem" component={AddItem}/>
                     <Route path="/productList" component={ProductListTable}/>

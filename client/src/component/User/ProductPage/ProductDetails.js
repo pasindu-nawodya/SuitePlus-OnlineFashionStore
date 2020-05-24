@@ -205,7 +205,7 @@ export default class ProductDetails extends Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg mt-5">
-                                    <img src={image} style={{width:'50%'}} />
+                                    <img src={items.pimage} style={{width:'50%'}} />
                                 </div>
                                 <div className="col-lg">
                                 <br />

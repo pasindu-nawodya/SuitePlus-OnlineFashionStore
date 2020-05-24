@@ -59,7 +59,7 @@ export default class DiscoutProduct extends Component {
                             {items.filter(filt => filt.pdiscount>0).map(item=>(                                
                                 <div className="col-md-4" key={item._id}>
                                     <div class="card mb-4 shadow-sm">
-                                        <img src={image} className="card-img-top" alt="..."></img>
+                                        <img src={item.pimage} className="card-img-top" alt="..."></img>
                                         <div className="card-body">
                                         <center>
                                         <table>

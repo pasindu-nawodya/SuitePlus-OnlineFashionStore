@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import image from '../img/shirt.jpg';
-import { faCartPlus,faHeart } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class AllItem extends Component {
     constructor(props){
@@ -51,7 +49,7 @@ export default class AllItem extends Component {
                             {items.map(item=>(                                                   
                                 <div className="col-md-4" key={item._id}>
                                     <div class="card mb-4 shadow-sm">
-                                        <img src={image} className="card-img-top" alt="..."></img>
+                                        <img src={item.pimage} className="card-img-top" alt="..."></img>
                                         <div className="card-body">
                                         <center>
                                         <table>
