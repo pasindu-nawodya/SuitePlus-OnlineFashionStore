@@ -21,6 +21,9 @@ export default class Appfunction extends Component {
                     <Route path="/productList" component={ProductListTable}/>
                 </Switch>
             </Router>
+            <br />
+            <br />
+            <br />
             <Footer />
             </div>
         );

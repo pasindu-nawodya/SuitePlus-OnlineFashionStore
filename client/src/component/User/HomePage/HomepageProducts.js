@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import image from './img/shirt.jpg';
 import { faCartPlus,faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -133,8 +134,10 @@ export default class HomepageProducts extends Component {
                                             <br />
                                             <div className="d-flex flex-row-reverse bd-highlight"> 
                                                 <div className="btn-group">
-                                                    <button type="button" className="btn btn-sm btn-success"><FontAwesomeIcon className="faicons" icon={faCartPlus} /> &nbsp;BUY</button>
+                                                   
+                                                    <Link to={'/product/'+item._id}><button type="button" className="btn btn-sm btn-success"><FontAwesomeIcon className="faicons" icon={faCartPlus} /> &nbsp;BUY</button></Link>
                                                     <button type="button" className="btn btn-sm btn-danger" onClick = {()=>this.addtoWishlist(item.pimage,item.pname,item.pprice*(100-item.pdiscount)/100,item.psize,item._id)}><FontAwesomeIcon className="faicons" icon={faHeart} />&nbsp;LOVE</button>
+
                                                 </div>
                                             </div>
                                         </div>
