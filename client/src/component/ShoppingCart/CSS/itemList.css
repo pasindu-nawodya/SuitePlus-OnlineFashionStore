@@ -19,7 +19,7 @@
 .productName{
 
     font-family: Alike;
-    font-size: 13px;
+    font-size: 22px;
     font-weight: bold;
 
 
@@ -39,14 +39,14 @@
 }
 .productColour{
     font-family: Asul;
-    color: #b3b5b5;
-    font-size: 15px;
+    color: #696969;
+    font-size: 18px;
 
 }
 .productSize{
     font-family: Asul;
-    color: #b3b5b5;
-    font-size: 15px;
+    color: #696969;
+    font-size: 18px;
 }
 .productimage{
     height: auto;

@@ -49,7 +49,7 @@ export default class AllItem extends Component {
                             {items.map(item=>(                                                   
                                 <div className="col-md-4" key={item._id}>
                                     <div class="card mb-4 shadow-sm">
-                                        <img src={item.pimage} className="card-img-top" alt="..."></img>
+                                        <img src={item.pimage} className="card-img-top"  style={{height:"275px"}}  alt="..."></img>
                                         <div className="card-body">
                                         <center>
                                         <table>

@@ -161,7 +161,7 @@ class WishList extends React.Component {
 
     gotoHome = () =>{
         console.log("home");
-        this.props.history.push('/');
+        this.props.history.push('/product');
     }
 
     render() {

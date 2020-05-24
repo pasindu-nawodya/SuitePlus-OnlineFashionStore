@@ -4,6 +4,7 @@ import AdminApp from './component/Admin/AdminApp';
 import LoginAdmin from './component/Admin/LoginAdmin';
 import StockApp from './component/StockManager/StockApp';
 import UserApp from './component/UserApp';
+import Login from './component/StockManager/LoginStockMan'
 
 
 
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" exact component={UserApp}/>
             <Route path="/admin" exact component={AdminApp}/>
             <Route path="/stockman" exact component={StockApp}/>
+            <Route path="/loginstock" exact component={Login}/>
         </Switch>
       </Router>
     </div>

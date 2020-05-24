@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-//import './CSS/CartMain.css';
+import './CSS/CartMain.css';
 import Container from 'react-bootstrap/Container';
 //import '@fortawesome/fontawesome-free/css/all.min.css';
 //import 'bootstrap-css-only/css/bootstrap.min.css';
@@ -60,32 +60,28 @@ class CartMain extends Component{
             <div className="container">
                 
                 <Container>
+              <center>
                     <div className="title">  
 
-                            <h1>
+                            <h1 className = "head1">
                                 <span>&nbsp;&nbsp;&nbsp;<img src={require('./images/favouritecart.png')}/></span>
                                 My Shopping Cart</h1>
 
                     </div>
+                </center>
+
+               <CartItems  numItems = {this.getNumOfItems} tprice = {this.getTotalPrice}   userInfo = {this.state.userId} ></CartItems>
+               <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
 
 
-                    <CartItems  numItems = {this.getNumOfItems} tprice = {this.getTotalPrice}  ></CartItems>
-
-                    <div className="title">
 
 
-                    <center>
-                           <h1 className = "head1">
-                           <span>&nbsp;&nbsp;&nbsp;<img src={require('./images/favouritecart.png')}/></span>My Shopping Cart</h1>
-
-
-                    <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
                 
 
-                     </center>
-                     </div>
-                     <CartItems  numItems = {this.getNumOfItems} tprice = {this.getTotalPrice}   userInfo = {this.state.userId} ></CartItems>
-                     <PaymentBox items = {this.state.numOfItems} price = {this.state.totalPrice} ></PaymentBox>
+
+
+
+
                 </Container>
 
 

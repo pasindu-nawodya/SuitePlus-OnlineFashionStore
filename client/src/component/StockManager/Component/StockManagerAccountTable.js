@@ -20,7 +20,7 @@ export default class StockManagerAccountTable extends Component {
 
     componentDidMount(){
 
-        fetch('http://localhost:4000/stockManager/5ec74bb198726626e48d6bc9')
+        fetch('http://localhost:4000/stockManager/5eca7285111b022a94ab40ef')
             .then(res=>res.json())
             .then(json=>{
                 this.setState({
@@ -45,7 +45,7 @@ export default class StockManagerAccountTable extends Component {
 
         alert('Updated Successfully!')
 
-        axios.post(`http://localhost:4000/stockManager/5ec74bb198726626e48d6bc9`, this.state)
+        axios.post(`http://localhost:4000/stockManager/5eca7285111b022a94ab40ef`, this.state)
             .then(res => {
                 console.log(res);
                 console.log(res.data);

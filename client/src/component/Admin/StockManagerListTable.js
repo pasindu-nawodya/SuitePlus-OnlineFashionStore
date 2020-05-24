@@ -9,7 +9,7 @@ export default class StockManagerListTable extends Component {
         return (
             <div>
             <TitleBanner TitleName={"StockManager List"} />
-        <StockManagerTable />
+                <StockManagerTable />
         <Footer />
         </div>
     )

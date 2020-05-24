@@ -63,14 +63,15 @@ export default class NavBar extends Component {
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <div className="dropdown-item">Stock Manager</div>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Profile</a>
-                                    <a className="dropdown-item" href="#">Account Setting</a>
+                                    <Link to="/stockmanager"><a className="dropdown-item" href="#">Profile</a></Link>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#">
+                                    <Link to="/loginstock">
                                     <button className="btn btn-success my-2 my-sm-0" type="submit"> 
                                         <FontAwesomeIcon className="faicons" icon={faSignOutAlt} />
                                         Logout
-                                        </button>
+                                    </button>
+                                    </Link>
                                     </a>
                                 </div>
                             </li>

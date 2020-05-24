@@ -71,7 +71,7 @@ class CartItems extends React.Component{
 
 
 
-    componentDidMount ()  {
+    componentWillMount ()  {
 
         this.callAPI();
 
@@ -263,7 +263,7 @@ class CartItems extends React.Component{
 
     gotoHome = () =>{
         console.log("home");
-        this.props.history.push('/');
+        this.props.history.push('/product');
     }
     render() {
 
@@ -301,7 +301,7 @@ class CartItems extends React.Component{
 
                 </div>
             );
-        } else {
+        } else if(this.state.isEmpty == false){
 
             return (
 

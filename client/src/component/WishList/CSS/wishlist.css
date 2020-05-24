@@ -24,7 +24,7 @@
 .productName{
 
     font-family: Alike;
-    font-size: 13px;
+    font-size: 22px;
     font-weight: bold;
 
 
@@ -39,19 +39,19 @@
 .product{
     text-align: center;
     float: right;
-    line-height: 15px;
+    line-height: 18px;
 
 }
 .productColour{
     font-family: Asul;
-    color: #b3b5b5;
+    color: #696969;
     font-size: 15px;
 
 }
 .productSize{
     font-family: Asul;
-    color: #b3b5b5;
-    font-size: 15px;
+    color: #696969;
+    font-size: 18px;
 }
 .productimage{
     height: auto;

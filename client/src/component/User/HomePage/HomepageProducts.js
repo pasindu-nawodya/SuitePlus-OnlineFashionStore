@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import image from './img/shirt.jpg';
 import { faCartPlus,faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Alert from 'react-bootstrap/Alert';
@@ -112,7 +113,7 @@ export default class HomepageProducts extends Component {
                             {items.slice(0, 9).map(item=>(                                                   
                                 <div className="col-md-4" key={item._id}>
                                     <div class="card mb-4 shadow-sm">
-                                        <img src={item.pimage} className="card-img-top" alt="..."></img>
+                                        <img src={item.pimage} className="card-img-top " style={{height:"275px"}}  alt="..."></img>
                                         <div className="card-body">
                                         <center>
                                         <table>
@@ -130,7 +131,7 @@ export default class HomepageProducts extends Component {
                                             </tr>                                       
                                         </table>
                                         </center>
-                                            <br />
+                                            <br/>
                                             <div className="d-flex flex-row-reverse bd-highlight"> 
                                                 <div className="btn-group">
                                                    
