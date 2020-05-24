@@ -7,7 +7,6 @@ import Footer from './Component/Footer';
 import LoginStockMan from './LoginStockMan';
 import NavBar from './Component/NavBar';
 import AllItem from './AllProduct';
-import Account from './StockManagerAccount'
 
 export default class Appfunction extends Component {
     render(){
@@ -20,7 +19,6 @@ export default class Appfunction extends Component {
                     <Route path="/allitem" component={AllItem}/>
                     <Route path="/additem" component={AddItem}/>
                     <Route path="/productList" component={ProductListTable}/>
-                    <Route path="/account" component={Account}/>
                 </Switch>
             </Router>
             <br />

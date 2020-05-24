@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class StockManagerList extends Component {
+export default class CategoryList extends Component {
     render() {
         return (
             <div>
@@ -11,7 +11,7 @@ export default class StockManagerList extends Component {
             <ul className="list-group mb-3">
             <li className="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-            <h6 className="my-0">David</h6>
+            <h6 className="my-0">Shirts</h6>
             </div>
             </li>
             </ul>

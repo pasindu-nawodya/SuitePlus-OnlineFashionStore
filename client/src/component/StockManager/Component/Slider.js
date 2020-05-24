@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class Slider extends Component {
     render() {
@@ -16,9 +15,9 @@ export default class Slider extends Component {
                     <h1 style={{fontSize:"60px"}}><b>Stock Manager Dashboard</b></h1>           
                     <p className="lead text-muted"><b>Current Date: {date} </b></p>                
                     <p>
-                      <Link to="allitem"><div className="btn btn-primary my-2">Production List</div></Link>
+                      <a href="#" className="btn btn-primary my-2">Production List</a>
                       <span>&nbsp;&nbsp;</span>
-                      <Link to="additem"><div className="btn btn-secondary my-2">Item Operation</div></Link>
+                      <a href="#" className="btn btn-secondary my-2">Item Operation</a>
                     </p>
                   </div>            
                 </section>

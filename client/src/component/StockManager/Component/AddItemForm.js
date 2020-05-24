@@ -32,27 +32,6 @@ export default class AddItemForm extends Component {
                 })
             });
     }
-
-    //save product images in cloud storage
-    uploadImage = async e => {
-        const files = e.target.files
-        const data = new FormData()
-        data.append('file', files[0])
-        data.append('upload_preset', 'suiteplus')
-        const res = await fetch(
-          'https://api.cloudinary.com/v1_1/dujlxhnx3/image/upload',
-          {
-            method: 'POST',
-            body: data
-          }
-        )
-        const file = await res.json()
-        this.setState({
-            pimage:file.secure_url
-        })
-        console.log(file.secure_url)
-      }
-    
     
       handleChange = event => {
         this.setState({ 
@@ -71,7 +50,6 @@ export default class AddItemForm extends Component {
             console.log(res);
             console.log(res.data);
           })
-
       }
 
     render() {
@@ -187,7 +165,7 @@ export default class AddItemForm extends Component {
                                     <div className="input-group-prepend">
                                         <span className="input-group-text" id="inputGroup-sizing-default">Image</span>
                                     </div>
-                                    <input type="file" name="file" onChange={this.uploadImage} className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required/>                                 
+                                    <input type="text" name="pimage" onChange={this.handleChange} className="form-control"  aria-label="Default" aria-describedby="inputGroup-sizing-default" required/>                                 
                                 </div>  
 
                                 <hr className="mb-4" />

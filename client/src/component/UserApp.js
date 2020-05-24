@@ -9,12 +9,18 @@ import ProductDetails from './User/ProductPage/ProductDetails';
 import UserLogin from './User/UserAccount/UserLogin';
 import UserRegister from './User/UserAccount/UserRegister';
 import Footer from './views/Footer/Footer';
+import WishListMain from './WishList/WishListMain';
 import CartMain from './ShoppingCart/CartMain';
+
+import PaymentForm from './Payment/payment-form.component';
+import ListPayment from './Payment/payment-list.component';
+import EditPayment from './Payment/payment-edit.component';
 import WishListMain from './WishList/WishListMain';
 import Payment from "./Payment/payment-form.component";
 import PaymentHistory from "./Payment/payment-list.component";
 import PaymentEdit from "./Payment/payment-edit.component";
 import UserAccount from './User/UserAccount/UserAccount';
+
 
 export default class Appfunction extends Component {
     render(){
@@ -30,12 +36,14 @@ export default class Appfunction extends Component {
                     <Route path="/userLogin" component={UserLogin}/>                    
                     <Route path="/useraccount" component={UserAccount}/>
                     <Route path="/userRegister" component={UserRegister}/>
-                    <Route path="/wishlist" component={ WishListMain}/>
-                    <Route path="/mycart" component={ CartMain}/>
-                    <Route path="/payment" component={ Payment}/>
-                    <Route path="/paymenthistory" component={ PaymentHistory}/>
-                    <Route path="/payment/edit/:id" component={ PaymentEdit}/>
+                    <Route path="/payment/add" exact component={PaymentForm}/>
+                    <Route path="/payment/history" exact component={ListPayment}/>
+                    <Route path="/payment/edit/:id" exact component={EditPayment}/>
+                    <Route path="/wishlist/:id" component={ WishListMain}/>
+                    <Route path="/mycart/:id" component={ CartMain}/>
                     <Route path="/product/:id" component={ProductDetails}/>                    
+
+
                 </Switch>
             </Router>
             <Footer/>
