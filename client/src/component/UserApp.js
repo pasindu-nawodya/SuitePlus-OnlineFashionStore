@@ -38,8 +38,8 @@ export default class Appfunction extends Component {
                     <Route path="/discount" component={DiscountProduct}/>
                     <Route path="/userLogin" component={UserLogin}/>
                     <Route path="/userRegister" component={UserRegister}/>
-                    <Route path="/wishlist" component={ WishListMain}/>
-                    <Route path="/mycart" component={ CartMain}/>
+                    <Route path="/wishlist/:id" component={ WishListMain}/>
+                    <Route path="/mycart/:id" component={ CartMain}/>
                 </Switch>
             </Router>
             <Footer/>

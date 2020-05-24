@@ -11,7 +11,7 @@ class WishListMain extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-
+              userId:this.props.match.params.id
         }
     }
 
@@ -21,6 +21,7 @@ class WishListMain extends React.Component{
 
 
         return (
+
             <div>
 
 
@@ -49,7 +50,7 @@ class WishListMain extends React.Component{
 
                     </div>
 
-                    <WishList></WishList>
+                    <WishList userId = {this.state.userId}></WishList>
 
 
                 </Container>

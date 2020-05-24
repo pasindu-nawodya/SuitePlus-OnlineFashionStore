@@ -10,6 +10,7 @@ export default class NavBar extends Component {
         this.state = {
             items:[],
             isLoaded:false,
+            userId:"5ec76f0b133ca45fccadc01a"
         }
     }
 
@@ -25,6 +26,9 @@ export default class NavBar extends Component {
                 })
             });
     }
+
+
+
 
     render() {
 
@@ -71,7 +75,7 @@ export default class NavBar extends Component {
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     
                     <li className="nav-item active">
-                    <Link to="/filterProduct"><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
+                    <Link to={`/wishlist/${this.state.userId}`}><div className="nav-link text-white"><b>Whishlist</b><span className="sr-only">(current)</span></div></Link>
                     </li>
                         
                     </ul>
@@ -85,7 +89,7 @@ export default class NavBar extends Component {
                                 </a>
 
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">My Cart</a>
+                              <Link to={`/mycart/${this.state.userId}`}><a className="dropdown-item" href="#">My Cart</a></Link>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#">Payment Setting</a>
                                     <a className="dropdown-item" href="#">Account Setting</a>

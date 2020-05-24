@@ -1,11 +1,12 @@
 import React from "react";
 import { MDBBtn } from "mdbreact";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
+//import '@fortawesome/fontawesome-free/css/all.min.css';
+//import 'bootstrap-css-only/css/bootstrap.min.css';
 import '../CSS/itemList.css';
 import Container from 'react-bootstrap/Container'
 import Button from "react-bootstrap/Button";
+import  {withRouter} from 'react-router-dom';
 
 
 
@@ -14,23 +15,31 @@ class CartItems extends React.Component{
     constructor(props){
 
         super(props);
-
         this.state = {
             numOfItems: 0,
             myCart:[],
             totalPrice:0,
             isEmpty:true,
-            loading:true
+            loading:true,
+            userId:""
         }
 
-    }
-    callAPI = async ()=>  {
 
-        await fetch("http://localhost:4000/cart/101")
+
+    }
+
+
+    callAPI = async  ()=>  {
+
+        this.setState({userId:this.props.users});
+        await fetch("http://localhost:4000/cart/"+this.props.userInfo)
             .then(res => res.json())
             .then(json => this.setState({
                 myCart:json,
-                loading:false
+                loading:false,
+                isEmpty: false,
+                userId:this.props.userInfo
+
             }));
         this.getNumberOfItems();
         this.calTotalprice();
@@ -52,10 +61,26 @@ class CartItems extends React.Component{
 
     }
 
-    componentWillMount()  {
-        this.callAPI();
-        //console.log("render");
+    componentWillReceiveProps(props) {
+        this.setState({
+           userId:props.userInfo
+        });
 
+    }
+
+
+
+
+    componentDidMount ()  {
+
+        this.callAPI();
+
+
+
+    }
+
+    componentDidUpdate(){
+        
     }
 
     //----increase the Quantity on button click---
@@ -231,10 +256,18 @@ class CartItems extends React.Component{
         this.setState({
             totalPrice:totalPrice
         });
-        console.log("price"+this.state.totalPrice);
+
     }
 
+     //-----redirect to home------
+
+    gotoHome = () =>{
+        console.log("home");
+        this.props.history.push('/');
+    }
     render() {
+
+
         let list = this.state.myCart;
         if(this.state.loading == true){
         return(
@@ -259,7 +292,7 @@ class CartItems extends React.Component{
                             <br/>
                             <span> <img src={require('../images/empty.png')} className="sadimage"/>
                   <p className="empty">You don't have any items in your cart. Let's get shopping!</p></span>
-                            <MDBBtn color="cyan" style={{color: "white"}}>Start Shopping</MDBBtn>
+                          <Button variant="info"style={{color: "white"}} onClick = {()=> this.gotoHome()}>Start Shopping</Button>
 
 
                         </div>
@@ -278,10 +311,11 @@ class CartItems extends React.Component{
 
 
                     {this.state.myCart.map((item) => (
+
                         <MDBContainer key={item.key}>
                             <MDBRow key={item.key}>
 
-                                <MDBCol className="cartCol" key={item.key}><img src={require('../images/whiteFrock.jpg')}
+                                <MDBCol className="cartCol" key={item.key}><img src={item.image}
                                                                    className="productimage"/> </MDBCol>
                                 <MDBCol className="cartCol" key={item.key}>
                                     <span><p className="productName" key={item.key}>{item.productName}</p></span>
@@ -323,4 +357,4 @@ class CartItems extends React.Component{
 
 }
 
-export default CartItems;
+export default withRouter(CartItems);

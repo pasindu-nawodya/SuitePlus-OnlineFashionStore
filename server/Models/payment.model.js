@@ -2,10 +2,8 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let paymentSchema = new Schema({
-    fname:{type:String, required:true},
-    lname:{type:String, required:true},
-    fline:{type:String, required:true},
-    Lline:{type:String, required:true},
+    name:{type:String, required:true},
+    address:{type:String, required:true},
     contact:{type:Number, required:true},
     cardnumber:{type:Number, required:true},
     cvv:{type:Number, required:true},
